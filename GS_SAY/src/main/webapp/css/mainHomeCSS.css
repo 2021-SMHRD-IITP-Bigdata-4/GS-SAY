@@ -1,0 +1,134 @@
+@charset "EUC-KR";
+  /*여기부턴 메인 웹페이지 입니다*/
+@font-face {
+            font-family: menufont;
+            src: url(font/NanumBarunGothic.ttf);
+        }
+ #jungwibox{
+    display: flex; top: 42%; margin-left: 15%; margin-right: 15%; width: 70%; position: absolute;
+}
+#jung1{
+    width: 15%; 
+}
+#jung1 img{
+    width: 70%; height: 70%; margin-left: 10%;padding-top: 15%;
+}
+#jung2{
+    width: 60%; padding-top: 4%;margin-left: 0%;
+}
+#jung2stop{
+    color: red; font-size: 300%; font-weight: bold;
+}
+#jung2benefit{
+    color:black; font-size: 300%; font-weight: bold;
+}
+#jung2check{
+    color:black; font-size: 200%; 
+}
+#jung3{
+    width: 25%; padding-top: 4%; 
+}
+#jung3btn{
+    background-color: #BDBDBD;  padding: 0.5%; border-radius: 5%;
+    width: 60%; text-align: center; height: 40%; margin-left: 115px;
+}
+#jung3 a{
+    text-decoration: none; display: block; padding-top: 5%;
+}
+#jung3 span{
+    color:black; font-size: 150%;
+}
+span{
+   font-family: menufont;
+}
+ /*종료되는 제도 문구*/
+#endfontbox{
+    display: flex; top: 62%; margin-left: 15%; margin-right: 15%;  position: absolute;
+     width: 70%;
+}
+#efb1{
+    width: 4%; margin-left: 0%; margin-right: 1%;
+}
+
+#efb2{
+    width: 30%; 
+}
+#efb2 span{
+    font-size: 200%; font-weight: bold; 
+}
+#efb3{
+    width: 35%; line-height: 300%;
+}
+#ebtn{
+    background-color: lightsalmon;  text-align: center;
+    border-radius: 10%; height: 70%; color: white; line-height: 220%;
+}
+/*종료제도 슬라이드*/
+#endslidebox{
+    display: flex; top: 70%; margin-left: 15%; margin-right: 15%;  position: absolute;
+     width: 70%;
+}
+#esb{
+    width: 100%; overflow: auto; white-space:nowrap;
+    
+}
+.slidediv{
+    width: 270px;
+    display: inline-block;
+}
+.people{
+    font-family: menufont; font-weight: bold; color: #2E64FE;
+    font-size: 130%;
+}
+.category{
+    font-family: menufont; font-weight: bold; color: #2E64FE;
+    font-size: 130%;
+}
+.head{
+    font-family: menufont; font-weight: bold; color: black;
+    font-size: 150%;
+}
+.content{
+    font-family: menufont; font-weight: bold; color: black;
+    font-size: 150%;
+}
+.day{
+    font-family: menufont; color: #A4A4A4;
+}
+.dmd{
+    font-family: menufont; color: #FE9A2E; font-weight: bold;
+}
+/*신규지원제도 문구*/
+#newfontbox{
+    display: flex; top: 95%; margin-left: 15%; margin-right: 15%;  position: absolute;
+     width: 70%;
+}
+#nfb1{
+    width: 4%; margin-left: 0%; margin-right: 1%;
+}
+
+#nfb2{
+    width: 28%; 
+}
+#nfb2 span{
+    font-size: 200%; font-weight: bold; 
+}
+#nfb3{
+    width: 37%; line-height: 300%;
+}
+#nbtn{
+    background-color: #0040FF;  text-align: center;
+    border-radius: 10%; height: 70%; color: white; line-height: 220%;
+}
+
+#newslidebox{
+    display: flex; top: 103%; margin-left: 15%; margin-right: 15%;  position: absolute;
+     width: 70%;
+}
+#nsb{
+    width: 100%; overflow: auto; white-space:nowrap;
+    
+}
+#yo{
+    font-size: 200%; color: white; top: 123%; position: absolute;
+}

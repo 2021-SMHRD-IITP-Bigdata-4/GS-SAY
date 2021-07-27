@@ -49,7 +49,7 @@
         }
         .new{
             color: white; border: white; background-color: #298AFF; width:50px; height: 30px; border-radius: 10%;
-        }
+        } 
         #tegbox3{
             width: 100%; position: absolute; top: 46%; align-content: center;
         }
@@ -61,13 +61,13 @@
             font-weight: bold; font-size: 160%;
         }
         #new{
-            width: 17%; position: absolute; margin-top: 0.3%; margin-left: 13%; margin-right: 15%; width:18%; height: 15%; font-size: 60%;
+            width: 17%; position: absolute; margin-top: 0.5%; margin-left: 16%; margin-right: 15%; width:18%; height: 15%; font-size: 60%;
         }
         #field{
-            position: absolute; top: 50%; margin-left: 68%; margin-right: 0%;
+            position: absolute; top: 50%; margin-left: 66%; margin-right: 0%;
         }
         #target{
-            position: absolute; top: 50%; margin-left: 77%; margin-right: 0%;
+            position: absolute; top: 50%; margin-left: 76%; margin-right: 0%;
         }
         #table{
             position: absolute; width:70%; top:58%; margin-left: 15%; margin-right: 16%;
@@ -115,8 +115,8 @@
         </div>
         <div id="tegbox1">
             <div id= "tegbox2">
-                <img id = "teg" src="img/tege.bmp">
-            </div>
+				<img id = "teg" src="img/tege.bmp">
+			</div>
         </div>
         <div id="tegbox3">
             <div id= "tegbox4">

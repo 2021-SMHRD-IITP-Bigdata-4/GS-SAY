@@ -24,12 +24,12 @@ public class loginProgram extends HttpServlet {
 		
 		listDAO dao = new listDAO();
 		listDTO dto = new listDTO(id, pw);
-		String name = dao.login(dto);
+		listDTO login = dao.login(dto);
 		
-		if (name != null) {
-			System.out.println(name + "성공");
+		if (login != null) {
+			System.out.println(login.getName() + "성공");
 			HttpSession session = request.getSession();
-			session.setAttribute("name", name);
+			session.setAttribute("login", login);
 			response.sendRedirect("mainHome.jsp");
 		}else {
 			System.out.println("실패");

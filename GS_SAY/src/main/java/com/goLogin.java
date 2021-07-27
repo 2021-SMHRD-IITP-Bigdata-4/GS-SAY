@@ -17,7 +17,7 @@ public class goLogin extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		session.removeAttribute("findDto");
-		session.removeAttribute("name");
+		session.removeAttribute("login");
 		
 		response.sendRedirect("mainHome.jsp");
 	}

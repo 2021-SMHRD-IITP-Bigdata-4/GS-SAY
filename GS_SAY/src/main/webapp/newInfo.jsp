@@ -1,3 +1,4 @@
+<%@page import="data.listDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -96,12 +97,12 @@
                     <img id="rogo" src="img/rogo.bmp">
                 </a>
             </div>
-            <% String name = (String)session.getAttribute("name"); %>
-            <% if (name != null) { %>
+            <% listDTO login = (listDTO)session.getAttribute("login"); %>
+            <% if (login != null) { %>
             <nav id="menubox">
                 <a href="goLogin">로그아웃</a>
                 <a href="#">나의 지원제도</a>
-                <a href="#">마이페이지</a>
+                <a href="myPage.jsp">마이페이지</a>
                 <a href="#">대상별 제도</a>
                 <a href="#">분야별 제도</a>
             </nav>

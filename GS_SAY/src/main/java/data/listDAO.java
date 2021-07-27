@@ -16,6 +16,7 @@ public class listDAO {
 	String id = null;
 	String pw = null;
 	listDTO findDto = null; 
+	listDTO login = null;
 
 	public void conn() {
 		try {
@@ -63,23 +64,28 @@ public class listDAO {
 			e.printStackTrace();
 		}
 	}
-	public String login(listDTO dto) {
+	public listDTO login(listDTO dto) {
 		conn();
 		try {
-			String sql = "select member_name from memberlist where member_id = ? and member_pw = ?";
+			String sql = "select * from memberlist where member_id = ? and member_pw = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
 			rs = psmt.executeQuery();
 			
 			if (rs.next()) {
-				name = rs.getString(1);
+				String id = rs.getString(1);
+				String pw = rs.getString(2);
+				String name = rs.getString(3);
+				String tel = rs.getString(4);
+				
+				login = new listDTO(id, pw, name, tel);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			close();
-		} return name;
+		} return login;
 	}
 	public listDTO findID(listDTO dto) {
 		conn();

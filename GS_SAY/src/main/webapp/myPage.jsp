@@ -1,3 +1,5 @@
+<%@page import="data.listDAO"%>
+<%@page import="data.listDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -51,6 +53,9 @@
     </style> 
 </head>
 <body>
+<% 
+listDTO login = (listDTO)session.getAttribute("login");
+%>
     <div>
         <!--메뉴바-->
         <div id = "menubar">
@@ -59,11 +64,21 @@
                     <img id="rogo" src="img/rogo.bmp">
                 </a>
             </div>
+            <% if (login != null) { %>
             <nav id="menubox">
-                <a href="#">로그인</a>
+                <a href="goLogin">로그아웃</a>
+                <a href="#">나의 지원제도</a>
+                <a href="myPage.jsp">마이페이지</a>
                 <a href="#">대상별 제도</a>
                 <a href="#">분야별 제도</a>
             </nav>
+            <% } else { %>
+            <nav id="menubox">
+                <a href="login.jsp">로그인</a>
+                <a href="#">대상별 제도</a>
+                <a href="#">분야별 제도</a>
+            </nav>
+            <% } %>
         </div>
         <!--태그바-->
         <div id="mytegbox1">
@@ -74,7 +89,7 @@
         <!--안녕하세요 누구님-->
         <div id="hibox">
             <h1>
-                안녕하세요, 대방어님!
+                안녕하세요, <%= login.getName() %>님!
             </h1>
             <hr color="#298AFF" size="7%" width="100%" align="left">
         </div>
@@ -85,19 +100,19 @@
             <table id="mytable">
                 <tr>
                     <td class="fo"><span>성명</span></td>
-                    <td><span>대방어</span></td>
+                    <td><span><%= login.getName() %></span></td>
                 </tr>
                 <tr>
                     <td class="fo"><span>전화번호</span></td>
-                    <td><span>010</span></td>
+                    <td><span><%= login.getTel() %></span></td>
                 </tr>
                 <tr>
                     <td class="fo"><span>아이디</span></td>
-                    <td><span>bigfish</span></td>
+                    <td><span><%= login.getId() %></span></td>
                 </tr>
                 <tr>
                     <td class="fo"><span>비밀번호</span></td>
-                    <td><span>sush</span></td>
+                    <td><span><%= login.getPw() %></span></td>
                 </tr>
             </table>
         </div>

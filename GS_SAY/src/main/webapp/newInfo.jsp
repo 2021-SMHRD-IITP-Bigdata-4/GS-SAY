@@ -93,20 +93,29 @@
         <div id = "menubar">
             <div id="rogobox">
                 <a href="#">
-                    <img id="rogo" src="/GS-SAY웹디자인/img/로고3.bmp">
+                    <img id="rogo" src="img/rogo.bmp">
                 </a>
             </div>
+            <% String name = (String)session.getAttribute("name"); %>
+            <% if (name != null) { %>
             <nav id="menubox">
-                <a href="#">로그아웃</a>
+                <a href="goLogin">로그아웃</a>
                 <a href="#">나의 지원제도</a>
                 <a href="#">마이페이지</a>
                 <a href="#">대상별 제도</a>
                 <a href="#">분야별 제도</a>
             </nav>
+            <% } else { %>
+            <nav id="menubox">
+                <a href="login.jsp">로그인</a>
+                <a href="#">대상별 제도</a>
+                <a href="#">분야별 제도</a>
+            </nav>
+            <% } %>
         </div>
         <div id="tegbox1">
             <div id= "tegbox2">
-                <img id = "teg" src="/GS-SAY웹디자인/img/메인_로고.bmp">
+                <img id = "teg" src="img/tege.bmp">
             </div>
         </div>
         <div id="tegbox3">

@@ -109,7 +109,7 @@
                 <span>종료가 얼마 안남았어요!</span>
             </div>
             <div id="efb3">
-                <a href="#"><span>더보기</span></a>
+                <a href="endInfo.jsp"><span>더보기</span></a>
             </div>
         </div>
         <!--종료제도 슬라이드-->
@@ -180,7 +180,7 @@
                 <span>새로 올라온 제도에요!</span>
             </div>
             <div id="nfb3">
-                <a href="#"><span>더보기</span></a>
+                <a href="newInfo.jsp"><span>더보기</span></a>
             </div>
         </div>
 

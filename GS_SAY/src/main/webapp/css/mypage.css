@@ -1,0 +1,36 @@
+@charset "EUC-KR";
+@font-face {
+    font-family: menufont;
+    src: url(/font/NanumBarunGothic.ttf);
+}
+#hibox{
+    width: 53%; margin-left: 23.5%; margin-right: 23.5%;position: absolute;
+    top: 35%;
+}
+#hibox h1{
+    font-family: menufont; color: #298AFF; font-weight: bold; font-size: 220%;
+}
+#myinfo{
+    width: 53%; margin-left: 23.5%; margin-right: 23.5%;position: absolute;
+    top: 50%;
+}
+#myinfo h1{
+    font-family: menufont; font-weight: bold;
+}
+#myinfotable{
+    width: 53%; margin-left: 23.5%; margin-right: 23.5%;position: absolute;
+    top: 60%;
+}
+#mytable{
+    border: 1px solid black; width: 100%;
+}
+#myinfotable td{
+    text-align: center; 
+}
+#mytable span{
+    font-family: menufont; color: black; font-size: 130%;
+}
+.fo{
+    background-color: #D8D8D8; width: 20%; padding-top: 3%;
+    padding-bottom: 3%;
+}

@@ -71,12 +71,12 @@
     <div>
         <div id = "menubar">
             <div id="rogobox">
-                <a href="#">
+                <a href="mainHome.jsp">
                     <img id="rogo" src="img/rogo.bmp">
                 </a>
             </div>
             <nav id="menubox">
-                <a href="#">로그인</a>
+                <a href="login.jsp">로그인</a>
                 <a href="#">대상별 제도</a>
                 <a href="#">분야별 제도</a>
             </nav>

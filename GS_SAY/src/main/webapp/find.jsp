@@ -75,11 +75,22 @@
                     <img id="rogo" src="img/rogo.bmp">
                 </a>
             </div>
+            <% String name = (String)session.getAttribute("name"); %>
+            <% if (name != null) { %>
+            <nav id="menubox">
+                <a href="goLogin">로그아웃</a>
+                <a href="#">나의 지원제도</a>
+                <a href="#">마이페이지</a>
+                <a href="#">대상별 제도</a>
+                <a href="#">분야별 제도</a>
+            </nav>
+            <% } else { %>
             <nav id="menubox">
                 <a href="login.jsp">로그인</a>
                 <a href="#">대상별 제도</a>
                 <a href="#">분야별 제도</a>
             </nav>
+            <% } %>
         </div>
         <div id="tegbox1">
             <div id= "tegbox2">

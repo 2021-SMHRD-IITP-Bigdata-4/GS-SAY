@@ -73,11 +73,22 @@
                     <img id="rogo" src="img/rogo.bmp">
                 </a>
             </div>
+            <% String name = (String)session.getAttribute("name"); %>
+            <% if (name != null) { %>
+            <nav id="menubox">
+                <a href="goLogin">로그아웃</a>
+                <a href="#">나의 지원제도</a>
+                <a href="#">마이페이지</a>
+                <a href="#">대상별 제도</a>
+                <a href="#">분야별 제도</a>
+            </nav>
+            <% } else { %>
             <nav id="menubox">
                 <a href="login.jsp">로그인</a>
                 <a href="#">대상별 제도</a>
                 <a href="#">분야별 제도</a>
             </nav>
+            <% } %>
         </div>
         <div id="tegbox1">
             <div id= "tegbox2">
@@ -101,13 +112,13 @@
                 </tr>
                 <tr>
                     <th align="center"> &nbsp PW &nbsp</th>
-                    <td><input id="inputBox" type="text" name="pw" placeholder="PW를 입력하세요">
+                    <td><input id="inputBox" type="password" name="pw" placeholder="PW를 입력하세요">
                     </td>
                 </tr>
                 <tr>
                     <td colspan=2>
-                        &nbsp&nbsp&nbsp <a href="findID.jsp">ID/PW찾기</a> &nbsp&nbsp
-                        <a href="join.jsp">회원가입</a>
+                        &nbsp&nbsp&nbsp <a href="find.jsp">ID/PW찾기</a>
+                        &nbsp&nbsp <a href="join.jsp">회원가입</a>
                     </td>
                 </tr>
             </table>

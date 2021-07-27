@@ -32,8 +32,8 @@ public class listDAO {
 
 	public int join(listDTO dto) {
 		conn();
+		String sql = "insert into memberlist values(?,?,?,?)";
 		try {
-			String sql = "insert into memberlist values(?,?,?,?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
@@ -66,7 +66,7 @@ public class listDAO {
 	public String login(listDTO dto) {
 		conn();
 		try {
-			String sql = "select name from memberlist where id = ? and pw = ?";
+			String sql = "select member_name from memberlist where member_id = ? and member_pw = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
@@ -84,7 +84,7 @@ public class listDAO {
 	public listDTO findID(listDTO dto) {
 		conn();
 		try {
-			String sql = "select * from memberlist where tel = ?";
+			String sql = "select * from memberlist where member_tel = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getTel());
 			rs = psmt.executeQuery();

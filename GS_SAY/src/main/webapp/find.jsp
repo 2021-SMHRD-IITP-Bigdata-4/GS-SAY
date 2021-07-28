@@ -87,7 +87,7 @@
             </nav>
             <% } else { %>
             <nav id="menubox">
-                <a href="login.jsp">로그인</a>
+                <a href="login.jsp" style="color:#298AFF">로그인</a>
                 <a href="target.jsp">대상별 제도</a>
                 <a href="field.jsp">분야별 제도</a>
             </nav>

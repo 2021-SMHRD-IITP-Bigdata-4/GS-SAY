@@ -60,23 +60,23 @@ listDTO login = (listDTO)session.getAttribute("login");
         <!--메뉴바-->
         <div id = "menubar">
             <div id="rogobox">
-                <a href="#">
+                <a href="mainHome.jsp">
                     <img id="rogo" src="img/rogo.bmp">
                 </a>
             </div>
             <% if (login != null) { %>
             <nav id="menubox">
                 <a href="goLogin">로그아웃</a>
-                <a href="#">나의 지원제도</a>
+                <a href="myInfo.jsp">나의 지원제도</a>
                 <a href="myPage.jsp">마이페이지</a>
-                <a href="#">대상별 제도</a>
-                <a href="#">분야별 제도</a>
+                <a href="target.jsp">대상별 제도</a>
+                <a href="field.jsp">분야별 제도</a>
             </nav>
             <% } else { %>
             <nav id="menubox">
                 <a href="login.jsp">로그인</a>
-                <a href="#">대상별 제도</a>
-                <a href="#">분야별 제도</a>
+                <a href="target.jsp">대상별 제도</a>
+                <a href="field.jsp">분야별 제도</a>
             </nav>
             <% } %>
         </div>

@@ -158,7 +158,7 @@
             <div id= "tegbox2">
                 <table id="menutable" style="text-align: center;">
                     <tr style="background-color:#298AFF;">
-                        <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="university.jsp" class="menufont">대학생 / 대학원생</a></th>
+                        <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="target.jsp" class="menufont">대학생 / 대학원생</a></th>
                         <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white; background-color: #FF853F;"><a href="soldier.jsp" class="menufont">군인</a></th>
                         <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="workfind.jsp" class="menufont">구직 / 이직희망 / 실업자</a></th>
                         <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="working.jsp" class="menufont">재직자</a></th>

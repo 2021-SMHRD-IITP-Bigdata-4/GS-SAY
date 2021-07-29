@@ -91,6 +91,12 @@
         #menutable{
             width: 70%; border: none; border-collapse: collapse;
         }
+        .menufont{
+            color:white; text-decoration: none; 
+        }
+        #menutable:hover{
+            background-color: #FF853F;
+        }
     </style>
     <style type = "text/css">
     ul{
@@ -155,9 +161,11 @@
             <div id= "tegbox2">
                 <table id="menutable" style="text-align: center;">
                     <tr style="background-color:#298AFF;">
-                        <th style="width:20%; font-size: 100%; height: 50%; color: white;">지역</th><th style="width:20%; font-size: 100%; height: 50%; color: white;">교육</th>
-                        <th style="width:20%; font-size: 100%; height: 50%; color: white;">고용 / 창업</th><th style="width:20%; font-size: 100%; height: 50%; color: white">주거</th>
-                        <th style="width:20%; font-size: 100%; height: 50%; color: white;">건강 및 기타</th>
+                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white; background-color: #FF853F;"><a href="field.jsp" class="menufont">지역</a></th>
+                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white;"><a href="education.jsp" class="menufont">교육</a></th>
+                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white;"><a href="employ.jsp" class="menufont">고용 / 창업</a></th>
+                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white;"><a href="live.jsp" class="menufont">주거</a></th>
+                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white;"><a href="health.jsp" class="menufont">건강 및 기타</a></th>
                     </tr>
                 </table>
             </div>

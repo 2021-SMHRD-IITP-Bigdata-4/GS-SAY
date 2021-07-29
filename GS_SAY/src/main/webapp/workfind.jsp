@@ -88,6 +88,12 @@
         #menutable{
             width: 70%; border: none; border-collapse: collapse;
         }
+        .menufont{
+            color:white; text-decoration: none; 
+        }
+        #menutable:hover{
+            background-color: #FF853F;
+        }
     </style>
     <style type = "text/css">
     ul{
@@ -152,10 +158,13 @@
             <div id= "tegbox2">
                 <table id="menutable" style="text-align: center;">
                     <tr style="background-color:#298AFF;">
-                        <th style="width:14%; font-size: 90%; height: 50%; color: white;">대학생 / 대학원생</th><th style="width:14%; font-size: 90%; height: 50%; color: white;">군인</th>
-                        <th style="width:14%; font-size: 90%; height: 50%; color: white;">구직 / 이직희망 / 실업자</th><th style="width:14%; font-size: 90%; height: 50%; color: white">재직자</th>
-                        <th style="width:14%; font-size: 90%; height: 50%; color: white;">창업자 / 예비창업자</th><th style="width:14%; font-size: 90%; height: 50%; color: white;">장애인</th>
-                        <th style="width:14%; font-size: 90%; height: 50%; color: white;">임신부</th>
+                        <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="university.jsp" class="menufont">대학생 / 대학원생</a></th>
+                        <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="soldier.jsp" class="menufont">군인</a></th>
+                        <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white; background-color: #FF853F;"><a href="workfind.jsp" class="menufont">구직 / 이직희망 / 실업자</a></th>
+                        <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="working.jsp" class="menufont">재직자</a></th>
+                        <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="selling.jsp" class="menufont">창업자 / 예비창업자</a></th>
+                        <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="disabled.jsp" class="menufont">장애인</a></th>
+                        <th id="menutable" style="width:14%; font-size: 90%; height: 50%; color: white;"><a href="pregnant.jsp" class="menufont">임신부</a></th>
                     </tr>
                 </table>
             </div>

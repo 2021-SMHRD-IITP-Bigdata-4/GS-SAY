@@ -97,7 +97,7 @@
             </div>
             <div id="jung3">
                 <div id="jung3btn">
-                    <a href="#"><span id="jung3submit">확인하러 가기</span></a>
+                    <a href="sumPage.jsp"><span id="jung3submit">확인하러 가기</span></a>
                 </div>
             </div>
         </div>

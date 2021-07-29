@@ -1,0 +1,146 @@
+@charset "EUC-KR";
+@font-face {
+            font-family: menufont;
+            src: url(font/NanumBarunGothic.ttf);
+        }
+#sumhead{
+    position: absolute; display: flex; margin-left: 19%; margin-right: 19%;
+    top: 47%; width: 62%;
+}
+#checkimg{
+    width: 5%;
+}
+#checkimg img{
+    width: 100%;
+}
+#headfont{
+    width: 95%;
+}
+#headfont span{
+    font-family: menufont; font-weight: bold; font-size: 250%;
+}
+#jungwibox{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 55%; width: 54%;
+}
+#jungwibox img{
+    width: 100%;
+}
+/*1*/
+#onefm{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 110%; width: 54%;
+}
+#onefm span{
+   font-weight: bold;  font-family: menufont; font-size: 200%;
+   color: #298aff;
+}
+#oneimg{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 115%; width: 54%;
+}
+#oneimg img{
+    width: 100%;
+}
+/*2*/
+#twofm{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 130%; width: 54%;
+}
+#twofm span{
+   font-weight: bold;  font-family: menufont; font-size: 200%;
+   color: #298aff;
+}
+#twoimg{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 135%; width: 54%;
+}
+#twoimg img{
+    width: 100%;
+}
+/*3*/
+#threefm{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 150%; width: 54%;
+}
+#threefm span{
+   font-weight: bold;  font-family: menufont; font-size: 200%;
+   color: #298aff;
+}
+#threeimg{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 155%; width: 54%;
+}
+#threeimg img{
+    width: 100%;
+}
+/*4*/
+#fourfm{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 170%; width: 54%;
+}
+#fourfm span{
+   font-weight: bold;  font-family: menufont; font-size: 200%;
+   color: #298aff;
+}
+#fourimg{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 175%; width: 54%;
+}
+#fourimg img{
+    width: 100%;
+}
+/*5*/
+#fivefm{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 190%; width: 54%;
+}
+#fivefm span{
+   font-weight: bold;  font-family: menufont; font-size: 200%;
+   color: #298aff;
+}
+#fiveimg{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 195%; width: 54%;
+}
+#fiveimg img{
+    width: 100%;
+}
+/*6*/
+#sixfm{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 210%; width: 54%;
+}
+#sixfm span{
+   font-weight: bold;  font-family: menufont; font-size: 200%;
+   color: #298aff;
+}
+#siximg{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 215%; width: 54%;
+}
+#siximg img{
+    width: 100%;
+}
+/*7*/
+#sevenfm{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 230%; width: 54%;
+}
+#sevenfm span{
+   font-weight: bold;  font-family: menufont; font-size: 200%;
+   color: #298aff;
+}
+#sevenimg{
+    position: absolute; margin-left: 23%; margin-right: 23%;
+    top: 235%; width: 54%;
+}
+#sevenimg img{
+    width: 100%;
+}
+#yo{
+    top: 250%;position: absolute; 
+}
+#yo span{
+    font-size: 200%; color: white;
+}

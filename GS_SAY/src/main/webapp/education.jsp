@@ -195,46 +195,47 @@
     <table id="table" style="text-align: center;">
         <thead>
             <tr>
-                <th colspan="5" style="font-size: 130%; height: 40px; background-color: #9FCAFF; font-weight: bold;" >전 체</th>
+                <th colspan="6" style="font-size: 130%; height: 40px; background-color: #9FCAFF; font-weight: bold;" >전 체</th>
             </tr>
             <tr style="background-color:#C1DDFF;">
-                <th width="7%" style="font-size: 110%; height: 40px;">No.</th>
-                <th width="14%" style="font-size: 110%; height: 40px;">시작날짜</th>
-                <th width="14%" style="font-size: 110%; height: 40px;">종료날짜</th>
+                <th width="6%" style="font-size: 110%; height: 40px;">No.</th>
+                <th width="13%" style="font-size: 110%; height: 40px;">시작날짜</th>
+                <th width="13%" style="font-size: 110%; height: 40px;">종료날짜</th>
                 <th width="15%" style="font-size: 110%; height: 40px;">대상</th>
-                <th width="50%" style="font-size: 110%; height: 40px;">제도명</th>
+                <th colspan width="50%" style="font-size: 110%; height: 40px;">제도명</th>
+                <th width="5%" "style="font-size: 110%; height: 40px;"></th>
             </tr>
         </thead>
           <tbody>
             <tr>
-              <td style="font-size: 100%; height: 40px; font-weight: bold;">1</td><td></td><td></td><td></td><td></td>
+              <td style="font-size: 100%; height: 40px; font-weight: bold;">1</td><td></td><td></td><td></td><td></td><td><button type="submit" form="##">찜</button></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">2</td><td></td><td></td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">2</td><td></td><td></td><td></td><td></td><td><form></form></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">3</td><td></td><td></td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">3</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">4</td><td></td><td></td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">4</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">5</td><td></td><td></td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">5</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">6</td><td></td><td></td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">6</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">7</td><td></td><td></td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">7</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">8</td><td></td><td></td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">8</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">9</td><td></td><td></td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">9</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">10</td><td></td><td></td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">10</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
           </tbody>
     </table>

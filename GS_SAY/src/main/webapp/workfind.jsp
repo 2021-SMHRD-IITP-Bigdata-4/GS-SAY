@@ -195,41 +195,43 @@
                 <th colspan="5" style="font-size: 130%; height: 40px; background-color: #9FCAFF; font-weight: bold;" >전 체</th>
             </tr>
             <tr style="background-color:#C1DDFF;">
-                <th width="10%" style="font-size: 110%; height: 40px;">No.</th>
-                <th width="25%" style="font-size: 110%; height: 40px;">분야</th>
-                <th width="65%" style="font-size: 110%; height: 40px;">제도명</th>
+                <th width="7%" style="font-size: 110%; height: 40px;">No.</th>
+                <th width="14%" style="font-size: 110%; height: 40px;">시작날짜</th>
+                <th width="14%" style="font-size: 110%; height: 40px;">종료날짜</th>
+                <th width="15%" style="font-size: 110%; height: 40px;">분야</th>
+                <th width="50%" style="font-size: 110%; height: 40px;">제도명</th>
             </tr>
         </thead>
           <tbody>
             <tr>
-              <td style="font-size: 100%; height: 40px; font-weight: bold;">1</td><td></td><td></td>
+              <td style="font-size: 100%; height: 40px; font-weight: bold;">1</td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">2</td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">2</td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">3</td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">3</td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">4</td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">4</td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">5</td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">5</td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">6</td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">6</td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">7</td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">7</td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">8</td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">8</td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">9</td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">9</td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">10</td><td></td><td></td>
+                <td style="font-size: 100%; height: 40px; font-weight: bold;">10</td><td></td><td></td><td></td><td></td>
             </tr>
           </tbody>
     </table>

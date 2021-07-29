@@ -55,7 +55,7 @@
     <!--¸Þ´º¹Ù-->
     <div id = "menubar">
         <div id="rogobox">
-            <a href="#">
+            <a href="mainHome.jsp">
                 <img id="rogo" src="img/rogo.bmp">
             </a>
         </div>

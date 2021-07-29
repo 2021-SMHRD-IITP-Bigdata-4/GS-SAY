@@ -1,0 +1,34 @@
+@charset "EUC-KR";
+@font-face {
+            font-family: menufont;
+            src: url(font/NanumBarunGothic.ttf);
+        }
+#tablebox{
+margin-left: 15%; margin-right: 15%; width: 70%; position: absolute;
+top: 35%;
+}
+#tablebox table{
+ width: 100%; border-top:1px solid #444444;  border-collapse: collapse;
+}
+#tablebox td{
+    padding-top: 1.5%; padding-bottom: 1.5%;
+    border-bottom: 1px solid #444444;
+}
+#tablebox span{
+    font-family: menufont; 
+}
+#titled span{
+    font-weight: bold;
+}
+.t1{
+    width: 8%; background-color: #9DC5F1;
+}
+.t2{
+    width: 25%; background-color: #9DC5F1;
+}
+.t3{
+    width: 67%; background-color: #9DC5F1;
+}
+.dday{
+    color: red;
+}

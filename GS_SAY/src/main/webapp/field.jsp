@@ -161,11 +161,12 @@
             <div id= "tegbox2">
                 <table id="menutable" style="text-align: center;">
                     <tr style="background-color:#298AFF;">
-                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white; background-color: #FF853F;"><a href="field.jsp" class="menufont">지역</a></th>
-                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white;"><a href="education.jsp" class="menufont">교육</a></th>
-                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white;"><a href="employ.jsp" class="menufont">고용 / 창업</a></th>
-                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white;"><a href="live.jsp" class="menufont">주거</a></th>
-                        <th id="menutable" style="width:20%; font-size: 100%; height: 50%; color: white;"><a href="health.jsp" class="menufont">건강 및 기타</a></th>
+                        <th id="menutable" style="width:16.6%; font-size: 100%; height: 50%; color: white; background-color: #FF853F;"><a href="field.jsp" class="menufont">지역</a></th>
+                        <th id="menutable" style="width:16.6%; font-size: 100%; height: 50%; color: white;"><a href="education.jsp" class="menufont">교육</a></th>
+                        <th id="menutable" style="width:16.6%; font-size: 100%; height: 50%; color: white;"><a href="employ.jsp" class="menufont">고용 / 창업</a></th>
+                        <th id="menutable" style="width:16.6%; font-size: 100%; height: 50%; color: white;"><a href="live.jsp" class="menufont">주거</a></th>
+                        <th id="menutable" style="width:16.6%; font-size: 100%; height: 50%; color: white;"><a href="health.jsp" class="menufont">건강</a></th>
+                        <th id="menutable" style="width:16.6%; font-size: 100%; height: 50%; color: white;"><a href="etc.jsp" class="menufont">기타</a></th>
                     </tr>
                 </table>
             </div>

@@ -203,7 +203,7 @@
                 <th width="13%" style="font-size: 110%; height: 40px;">시작날짜</th>
                 <th width="13%" style="font-size: 110%; height: 40px;">종료날짜</th>
                 <th width="15%" style="font-size: 110%; height: 40px;">대상</th>
-                <th colspan width="50%" style="font-size: 110%; height: 40px;">제도명</th>
+                <th width="50%" style="font-size: 110%; height: 40px;">제도명</th>
                 <th width="5%" "style="font-size: 110%; height: 40px;"></th>
             </tr>
         </thead>

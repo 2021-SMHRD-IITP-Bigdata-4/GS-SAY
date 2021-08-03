@@ -1,8 +1,8 @@
-drop table memberlist;
-drop table maininfo;
-drop table category;
-drop table myscrap;
-drop table endinfo;
+drop table memberlist cascade constraint;
+drop table maininfo cascade constraint;
+drop table category cascade constraint;
+drop table myscrap cascade constraint;
+drop table endinfo cascade constraint;
 
 create table memberlist (
 member_id varchar2(15),
@@ -12,6 +12,7 @@ member_tel varchar2(15) not null,
 constraint memberlist_id_pk primary key(member_id));
 
 select * from memberlist;
+select * from myscrap;
 
 create table maininfo (
 info_num number(10),
@@ -31,7 +32,7 @@ code number(10),
 cate_name varchar2(20) not null,
 constraint category_code_pk primary key(code));
 
-create table myscrap(
+create table myscrap (
 scrap_num number(10),
 member_id varchar2(15),
 info_num number(20),

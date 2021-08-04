@@ -6,9 +6,12 @@ drop table endinfo cascade constraint;
 
 select * from memberlist;
 select * from myscrap;
+select * from category;
+select * from maininfo;
+select * from endinfo;
 
 create table memberlist (
-member_id varchar2(15),
+member_id varchar2(50),
 member_pw varchar2(15) not null,
 member_name varchar2(15) not null,
 member_tel varchar2(15) not null,
@@ -32,7 +35,7 @@ constraint maininfo_code_fk foreign key (code) references category(code));
 
 create table myscrap (
 scrap_num number(10),
-member_id varchar2(15),
+member_id varchar2(50),
 info_num number(20),
 end_day date,
 info_name varchar2(150) not null,

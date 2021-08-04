@@ -106,7 +106,7 @@
             <table id="loginbox">
                 <tr>
                     <th align="center"> &nbsp ID &nbsp</th>
-                    <td><input id="inputBox" type="text" name="id" placeholder="ID를 입력하세요">
+                    <td><input id="inputBox" type="text" name="id" placeholder="E-MAIL을 입력하세요">
                     </td>
                     <td rowspan=2><input type="submit" value="로그인" id="login">
                     </td>

@@ -107,7 +107,7 @@
                 <tr>
                     <th align = "center"> &nbsp&nbsp&nbsp 아이디 &nbsp&nbsp&nbsp<br><br>
                     </td>
-                    <td><input id="inputBox" type="text" name="id" placeholder = "ID를 입력하세요"><br><br>
+                    <td><input id="inputBox" type="text" name="id" placeholder = "E-MAIL을 입력하세요"><br><br>
                     </td>
                 </tr>
                 <tr>

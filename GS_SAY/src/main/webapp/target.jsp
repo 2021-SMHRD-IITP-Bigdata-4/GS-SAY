@@ -44,7 +44,6 @@
             float: left; line-height: 25px; text-align: center;
             width: 100%; height: 50%; margin-left: 15%; margin-right: 15%;  display: flex;
         }
-
         .new{
             color: white; border: white; background-color: #298AFF; width:50px; height: 30px; border-radius: 10%;
         }
@@ -65,7 +64,13 @@
             position: absolute; top: 26%; margin-left: 56%; margin-right: 0%;
         }
         #field{
-            position: absolute; top: 26%; margin-left: 76%; margin-right: 0%;
+            position: absolute; top: 26%; margin-left: 72%; margin-right: 0%;
+        }
+        #go{
+        	position: absolute; top:26%; margin-left: 82%; text-align: center;
+        }
+        .go{
+        	font-size: 50px; width: 45px; height: 15px; background-color:#FF853F; border-radius: 10%;
         }
         #table{
             position: absolute; width:70%; top:36%; margin-left: 15%; margin-right: 16%;
@@ -178,6 +183,7 @@
                 </div> 
             </div>
         </div>
+        <form action="">
         <div id = "field">
             <select name="field" style="width: 170px; height: 40px; font-size: 100%;">
                 <option value="">분야 선택</option>
@@ -185,8 +191,13 @@
                 <option value="교육">교육</option>
                 <option value="고용/창업">고용 / 창업</option>
                 <option value="주거">주거</option>
-                <option value="건강및기타">건강 및 기타</option>
+                <option value="건강">건강</option>
+                <option value="기타">기타</option>
             </select>
+        </div>
+        </form>
+        <div id = "go">
+			<input class="button" type="button" value="go" id="go">
         </div>
     </div>
     <table id="table" style="text-align: center;">

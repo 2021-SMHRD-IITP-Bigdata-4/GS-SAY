@@ -196,7 +196,8 @@
                 <option value="교육">교육</option>
                 <option value="고용/창업">고용 / 창업</option>
                 <option value="주거">주거</option>
-                <option value="건강및기타">건강 및 기타</option>
+                <option value="건강">건강</option>
+                <option value="기타">기타</option>
             </select>
         </div>
         <div id = "target">

@@ -49,8 +49,12 @@
         #teg{
             width: 100%;
         }
-       
-        
+       #nfb2{
+    	width: 23%; 
+		}
+        #efb2{
+   	 width: 25%; 
+		}
     </style>
 </head>
 <body>
@@ -110,7 +114,7 @@
                 <span>종료가 얼마 안남았어요!</span>
             </div>
             <div id="efb3">
-                <a href="endInfo.jsp"><span>더보기</span></a>
+                <a style="text-decoration: none; color: #848484; font-weight: bolder;" href="endInfo.jsp">더보기</a>
             </div>
         </div>
         <!--종료제도 슬라이드-->
@@ -181,7 +185,7 @@
                 <span>새로 올라온 제도에요!</span>
             </div>
             <div id="nfb3">
-                <a href="newInfo.jsp"><span>더보기</span></a>
+                <a style="text-decoration: none; color: #848484; font-weight: bolder;" href="newInfo.jsp">더보기</a>
             </div>
         </div>
 

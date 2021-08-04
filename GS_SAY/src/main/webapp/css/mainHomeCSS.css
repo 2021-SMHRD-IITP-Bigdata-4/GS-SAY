@@ -50,15 +50,14 @@ span{
     width: 4%; margin-left: 0%; margin-right: 1%;
 }
 
-#efb2{
-    width: 30%; 
-}
+
 #efb2 span{
     font-size: 200%; font-weight: bold; 
 }
 #efb3{
-    width: 20%; line-height: 300%;
+    width: 22%; line-height: 300%;
 }
+
 #ebtn{
     background-color: lightsalmon;  text-align: center;
     border-radius: 10%; height: 70%; color: white; line-height: 220%;
@@ -107,14 +106,15 @@ span{
     width: 4%; margin-left: 0%; margin-right: 1%;
 }
 
-#nfb2{
-    width: 28%; 
-}
+
 #nfb2 span{
     font-size: 200%; font-weight: bold; 
 }
 #nfb3{
-    width: 37%; line-height: 300%;
+    width: 38%; line-height: 300%; text-decoration: none;
+}
+#nfb3 a{
+    text-decoration: none;
 }
 #nbtn{
     background-color: #0040FF;  text-align: center;

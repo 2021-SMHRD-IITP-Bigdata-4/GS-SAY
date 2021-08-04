@@ -4,6 +4,10 @@ drop table category cascade constraint;
 drop table myscrap cascade constraint;
 drop table endinfo cascade constraint;
 
+drop sequence infonum;
+drop sequence endinfonum;
+drop sequence scrapnum;
+
 select * from memberlist;
 select * from myscrap;
 select * from category;
@@ -55,11 +59,11 @@ info_link varchar2(500) not null,
 constraint endinfo_endinfo_num_pk primary key (endinfo_num),
 constraint endinfo_info_num_fk foreign key (info_num) references maininfo(info_num));
 
-create sequence info_num
-start with 1 increment by 1
+create sequence infonum
+start with 1 increment by 1;
 
-create sequence scrap_num
-start with 1 increment by 1
+create sequence scrapnum
+start with 1 increment by 1;
 
-create sequence endinfo_num
-start with 1 increment by 1
+create sequence endinfonum
+start with 1 increment by 1;

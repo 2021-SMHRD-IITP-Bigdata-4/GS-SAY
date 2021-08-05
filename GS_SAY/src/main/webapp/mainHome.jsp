@@ -49,12 +49,8 @@
         #teg{
             width: 100%;
         }
-       #nfb2{
-    	width: 23%; 
-		}
-        #efb2{
-   	 width: 25%; 
-		}
+       
+        
     </style>
 </head>
 <body>

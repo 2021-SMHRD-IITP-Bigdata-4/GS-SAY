@@ -117,6 +117,7 @@
         <div id="endslidebox">
            
             <div id="esb">
+            	<% for (int i = 0; i < 8; i++) {%>
                 <a href="#">
                     <div class="slidediv">
                         <span class="people">[대학생/대학원생]</span>
@@ -127,47 +128,7 @@
                         <span class="dmd">(D-5)</span>
                     </div>
                     </a>
-                
-                    <a href="#">
-                        <div class="slidediv">
-                            <span class="people">[대학생/대학원생]</span>
-                            <span class="category">[교육]</span><br><br>
-                            <span class="head">OK장학재단 장학금 지원</span><br>
-                            <span class="content">(학비 및 생활비 지원)</span><br><br>
-                            <span class="day">7.10일까지</span>
-                            <span class="dmd">(D-5)</span>
-                        </div>
-                        </a>
-                    <a href="#">
-                            <div class="slidediv">
-                                <span class="people">[대학생/대학원생]</span>
-                                <span class="category">[교육]</span><br><br>
-                                <span class="head">OK장학재단 장학금 지원</span><br>
-                                <span class="content">(학비 및 생활비 지원)</span><br><br>
-                                <span class="day">7.10일까지</span>
-                                <span class="dmd">(D-5)</span>
-                            </div>
-                        </a>
-                    <a href="#">
-                            <div class="slidediv">
-                                <span class="people">[대학생/대학원생]</span>
-                                <span class="category">[교육]</span><br><br>
-                                <span class="head">OK장학재단 장학금 지원</span><br>
-                                <span class="content">(학비 및 생활비 지원)</span><br><br>
-                                <span class="day">7.10일까지</span>
-                                <span class="dmd">(D-5)</span>
-                            </div>
-                    </a>
-                    <a href="#">
-                        <div class="slidediv">
-                            <span class="people">[대학생/대학원생]</span>
-                            <span class="category">[교육]</span><br><br>
-                            <span class="head">OK장학재단 장학금 지원</span><br>
-                            <span class="content">(학비 및 생활비 지원)</span><br><br>
-                            <span class="day">7.10일까지</span>
-                            <span class="dmd">(D-5)</span>
-                        </div>
-                        </a>
+                <% } %>
                 <br><br>
             </div>
         </div>
@@ -189,16 +150,7 @@
          <div id="newslidebox">
            
             <div id="nsb">
-                <a href="#">
-                <div class="slidediv">
-                    <span class="people">[대학생/대학원생]</span>
-                    <span class="category">[교육]</span><br><br>
-                    <span class="head">OK장학재단 장학금 지원</span><br>
-                    <span class="content">(학비 및 생활비 지원)</span><br><br>
-                    <span class="day">7.10일까지</span>
-                    <span class="dmd">(D-5)</span>
-                </div>
-                </a>
+                <% for (int i = 0; i < 8; i++) {%>
                 <a href="#">
                     <div class="slidediv">
                         <span class="people">[대학생/대학원생]</span>
@@ -208,57 +160,8 @@
                         <span class="day">7.10일까지</span>
                         <span class="dmd">(D-5)</span>
                     </div>
-                </a>
-                <a href="#">
-                        <div class="slidediv">
-                            <span class="people">[대학생/대학원생]</span>
-                            <span class="category">[교육]</span><br><br>
-                            <span class="head">OK장학재단 장학금 지원</span><br>
-                            <span class="content">(학비 및 생활비 지원)</span><br><br>
-                            <span class="day">7.10일까지</span>
-                            <span class="dmd">(D-5)</span>
-                        </div>
-                </a>
-                <a href="#">
-                    <div class="slidediv">
-                        <span class="people">[대학생/대학원생]</span>
-                        <span class="category">[교육]</span><br><br>
-                        <span class="head">OK장학재단 장학금 지원</span><br>
-                        <span class="content">(학비 및 생활비 지원)</span><br><br>
-                        <span class="day">7.10일까지</span>
-                        <span class="dmd">(D-5)</span>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="slidediv">
-                        <span class="people">[대학생/대학원생]</span>
-                        <span class="category">[교육]</span><br><br>
-                        <span class="head">OK장학재단 장학금 지원</span><br>
-                        <span class="content">(학비 및 생활비 지원)</span><br><br>
-                        <span class="day">7.10일까지</span>
-                        <span class="dmd">(D-5)</span>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="slidediv">
-                        <span class="people">[대학생/대학원생]</span>
-                        <span class="category">[교육]</span><br><br>
-                        <span class="head">OK장학재단 장학금 지원</span><br>
-                        <span class="content">(학비 및 생활비 지원)</span><br><br>
-                        <span class="day">7.10일까지</span>
-                        <span class="dmd">(D-5)</span>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="slidediv">
-                        <span class="people">[대학생/대학원생]</span>
-                        <span class="category">[교육]</span><br><br>
-                        <span class="head">OK장학재단 장학금 지원</span><br>
-                        <span class="content">(학비 및 생활비 지원)</span><br><br>
-                        <span class="day">7.10일까지</span>
-                        <span class="dmd">(D-5)</span>
-                    </div>
-                </a>
+                    </a>
+                <% } %>
                 <br><br>
             </div>
         </div>

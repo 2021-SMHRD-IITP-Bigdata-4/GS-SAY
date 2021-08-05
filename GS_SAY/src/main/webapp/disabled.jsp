@@ -193,6 +193,27 @@
         </div>
        <form action="">
         <div id = "field">
+        	<table>
+            	<tr>
+            		<td>
+            			<input type="radio" name="region" value="">瘤开 急琶
+            			<input type="radio" name="region" value="堡林">堡林 傈眉
+            			<input type="radio" name="region" value="堡林堡魂备">堡林 堡魂备
+            			<input type="radio" name="region" value="堡林合备">堡林 合备
+            			<input type="radio" name="region" value="堡林辑备">堡林 辑备
+            			<input type="radio" name="region" value="堡林巢备">堡林 巢备
+            			<input type="radio" name="region" value="堡林悼备">堡林 悼备
+            		</td>
+            		<td></td>
+            		<td></td>
+            	</tr>
+            </table>
+            <option value="">瘤开 急琶</option>
+                <option value="堡魂备">堡魂备</option>
+                <option value="巢备">巢备</option>
+                <option value="悼备">悼备</option>
+                <option value="合备">合备</option>
+                <option value="辑备">辑备</option>
             <select name="field" style="width: 170px; height: 40px; font-size: 100%;">
                 <option value="">盒具 急琶</option>
                 <option value="瘤开">瘤开</option>

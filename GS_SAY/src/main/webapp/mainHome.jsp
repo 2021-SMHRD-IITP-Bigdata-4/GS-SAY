@@ -175,7 +175,7 @@
         <!--신규지원제도 문구-->
         <div id ="newfontbox">
             <div id="nfb1">
-                <div id="nbtn"><span>HOT</span></div>
+                <div id="nbtn"><span>NEW</span></div>
             </div>
             <div id="nfb2">
                 <span>새로 올라온 제도에요!</span>

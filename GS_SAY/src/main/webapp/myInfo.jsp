@@ -65,14 +65,12 @@
                 <a href="goLogin">로그아웃</a>
                 <a href="myInfo.jsp">나의 지원제도</a>
                 <a href="myPage.jsp">마이페이지</a>
-                <a href="target.jsp">대상별 제도</a>
-                <a href="field.jsp">분야별 제도</a>
+                <a href="search.jsp">지원제도 검색</a>
             </nav>
             <% } else { %>
             <nav id="menubox">
                 <a href="login.jsp">로그인</a>
-                <a href="target.jsp">대상별 제도</a>
-                <a href="field.jsp">분야별 제도</a>
+                <a href="search.jsp">지원제도 검색</a>
             </nav>
             <% } %>
     </div>

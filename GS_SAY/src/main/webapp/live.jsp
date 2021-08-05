@@ -49,7 +49,7 @@
             color: white; border: white; background-color: #298AFF; width:50px; height: 30px; border-radius: 10%;
         }
         #tegbox3{
-            width: 100%; position: absolute; top: 26%; align-content: center;
+            width: 100%; position: absolute; top: 25.6%; align-content: center;
         }
         #tegbox4{
             width: 70%; margin-left: 15%; margin-right: 15%;  display: flex;
@@ -64,11 +64,21 @@
         #region{
             position: absolute; top: 26%; margin-left: 56%; margin-right: 0%;
         }
-        #field{
-            position: absolute; top: 26%; margin-left: 66%; margin-right: 0%;
-        }
         #target{
-            position: absolute; top: 26%; margin-left: 76%; margin-right: 0%;
+            position: absolute; top: 26%; margin-left: 72.6%; margin-right: 0%;
+        }
+         #go{
+        	position: absolute; top:26%; margin-left: 82%; text-align: center;
+        }
+        .go{
+        	font-size: 50px; width: 45px; height: 15px; background-color:#FFDEAD; border-radius: 10%;
+        }
+        #menubutton{
+            position: absolute; width:70%; top:125%; margin-left: 15%; text-align: center; 
+        }
+        .menubutton{
+            font-size: 20px; width: 50px; height: 40px; color:#FF853F; background-color:#FFE4C4; border-radius: 10%; font-weight: bold; 
+            border-color: #FF853F;
         }
         #table{
             position: absolute; width:70%; top:36%; margin-left: 15%; margin-right: 16%;
@@ -79,10 +89,10 @@
             border-bottom: 1px solid #444444;
             padding:10px;
         }
-        #button{
+        #mainbutton{
             position: absolute; width:70%; top:125%; margin-left: 15%; text-align: center;
         }
-        .button{
+        .mainbutton{
             font-size: 20px; width: 50px; height: 50px; background-color:#C1DDFF; border-radius: 10%;
         }
         #bar{
@@ -180,6 +190,7 @@
                 </div> 
             </div>
         </div>
+        <form action="">
         <div id = "target">
             <select name="target" style="width: 170px; height: 40px; font-size: 100%;">
                 <option value="">대상 선택</option>
@@ -192,6 +203,10 @@
                 <option value="임신부">임신부</option>
             </select>
         </div>
+        <div id = "go">
+			<input class="menubutton" type="button" value="GO" id="go">
+        </div>
+        </form>
     </div>
     <table id="table" style="text-align: center;">
         <thead>
@@ -239,14 +254,14 @@
             </tr>
           </tbody>
     </table>
-    <div id="button">
-        <input class="button" type="button" value="<" id="bc">
-        <input class="button" type="button" value="1" id="b1">
-        <input class="button" type="button" value="2" id="b2">
-        <input class="button" type="button" value="3" id="b3">
-        <input class="button" type="button" value="4" id="b4">
-        <input class="button" type="button" value="5" id="b5">
-        <input class="button" type="button" value=">" id="fo">
-   </div>
+    <div id="mainbutton">
+        <input class="mainbutton" type="button" value="<" id="bc">
+        <input class="mainbutton" type="button" value="1" id="b1">
+        <input class="mainbutton" type="button" value="2" id="b2">
+        <input class="mainbutton" type="button" value="3" id="b3">
+        <input class="mainbutton" type="button" value="4" id="b4">
+        <input class="mainbutton" type="button" value="5" id="b5">
+        <input class="mainbutton" type="button" value=">" id="fo">
+   	</div>
 </body>
 </html>

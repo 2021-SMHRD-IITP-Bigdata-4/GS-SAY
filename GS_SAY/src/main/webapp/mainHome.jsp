@@ -45,7 +45,7 @@
             src: url(font/NanumBarunGothic.ttf);
         }
         #tegbox1{
-            width: 100%; position: absolute; top: 15%; align-content: center;
+            width: 100%; position: absolute; top: 17%; align-content: center;
         }
         #tegbox2{
             width: 70%; margin-left: 15%; margin-right: 15%;  display: flex;
@@ -96,12 +96,18 @@
             <div id="jung2">
                 <span id="jung2stop">[잠깐!]</span>
                 <span id="jung2benefit">중위소득</span>
-                <span id="jung2check">확인하고갈까?</span>
+                <span id="jung2check">확인하고 갈까?</span>
             </div>
             <div id="jung3">
                 <div id="jung3btn">
                     <a href="sumPage.jsp"><span id="jung3submit">확인하러 가기</span></a>
                 </div>
+            </div>
+        </div>
+        <!-- 소개문 -->
+        <div id="tegbox3">
+            <div id= "tegbox4">
+                <img id = "teg" src="img/mainexplain.bmp">
             </div>
         </div>
         <!--종료되는제도 문구-->

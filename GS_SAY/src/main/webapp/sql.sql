@@ -14,6 +14,14 @@ select * from category;
 select * from maininfo;
 select * from endinfo;
 
+insert into endinfo(endinfo_num, info_num, info_name, start_day, end_day, code, info_link)
+select endinfonum.nextval, info_num, info_name, start_day, end_day, code, info_link
+from maininfo
+where end_day<sysdate;
+
+delete from maininfo
+where end_day<sysdate;
+
 create table memberlist (
 member_id varchar2(50),
 member_pw varchar2(15) not null,

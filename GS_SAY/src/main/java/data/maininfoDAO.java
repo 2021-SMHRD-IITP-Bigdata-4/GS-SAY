@@ -52,7 +52,7 @@ public class maininfoDAO {
 
 	public ArrayList<mainInfoDTO> endinfo() {
 		conn();
-		String sql = "select * from maininfo order by end_day asc";
+		String sql = "select * from maininfo where end_day>sysdate order by end_day asc";
 		endDate = new ArrayList<mainInfoDTO>();
 		try {
 			psmt = conn.prepareStatement(sql);

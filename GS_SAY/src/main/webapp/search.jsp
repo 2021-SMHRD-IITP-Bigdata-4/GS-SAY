@@ -161,7 +161,7 @@
             <div id="categorychoice">
                 전체<input type="radio" name="category" class="localip" value="전체">
                 교육<input type="radio" name="category" class="localip" value="교육">
-                고용/창업<input type="radio" name="category" class="localip" value="고용">
+                고용/창업<input type="radio" name="category" class="localip" value="창업">
                 주거<input type="radio" name="category" class="localip" value="주거">
                 건강<input type="radio" name="category" class="localip" value="건강">
                 기타<input type="radio" name="category" class="localip" value="기타">
@@ -190,7 +190,10 @@
             <table id="table">
                 <thead>
                     <tr>
-                        <th colspan="5" style="font-size: 130%; height: 40px; background-color: #9FCAFF; font-weight: bold; font-family: menufont; text-align: left;" >&nbsp&nbsp&nbsp&nbsp&nbsp나의 선택 :</th>
+                        <th colspan="5" style="font-size: 130%; height: 40px; background-color: #9FCAFF; font-weight: bold; font-family: menufont; text-align: left;" >&nbsp&nbsp&nbsp&nbsp&nbsp나의 선택 : 
+                        <% if (request.getParameter("local") != null) {%>
+                        <%=request.getParameter("local")%>, <%=request.getParameter("category") %>, <%= request.getParameter("people") %>
+                        <% } %></th>
                     </tr>
                     <tr style="background-color:#C1DDFF;">
                         <th width="7%" style="font-size: 110%; height: 40px;">No.</th>
@@ -201,15 +204,14 @@
                     </tr>
                 </thead>
                    <tbody>
-                   <% ArrayList<mainInfoDTO> searchInfo=null;%>
-                   <% searchInfo = (ArrayList<mainInfoDTO>)session.getAttribute("searchInfo");%>
-                   <% if(searchInfo !=null){ %>
+                   <% ArrayList<mainInfoDTO> searchDTO = (ArrayList<mainInfoDTO>)session.getAttribute("searchDTO");%>
+                   <% if(searchDTO !=null){ %>
                    <% System.out.println("전송완료");%>
-                   <% System.out.println(searchInfo.size());%>
-                   <% for(int i =0; i<searchInfo.size();i++){%>
+                   <% System.out.println(searchDTO.size());%>
+                   <% for(int i =0; i<searchDTO.size();i++){%>
                     <tr>
-                      <td><%=i+1%></td><td><%= searchInfo.get(i).getStartDay()%></td><td><%=searchInfo.get(i).getEndDay()%></td>
-                      <td><a href="<%=searchInfo.get(i).getInfoLink()%>"></a><%=searchInfo.get(i).getInfoName()%></td><td><input type="submit" value="저장"></td>
+                      <td><%=i+1%></td><td><%= searchDTO.get(i).getStartDay()%></td><td><%=searchDTO.get(i).getEndDay()%></td>
+                      <td><a href="<%=searchDTO.get(i).getInfoLink()%>"></a><%=searchDTO.get(i).getInfoName()%></td><td><input type="submit" value="저장"></td>
                     </tr>
                     <%}}else{ %>
                     <tr>

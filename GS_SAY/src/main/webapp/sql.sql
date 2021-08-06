@@ -14,6 +14,8 @@ select * from category;
 select * from maininfo;
 select * from endinfo;
 
+select * from maininfo where end_day>sysdate and code = (select code from category where cate_name = '광주창업자창업')
+
 insert into endinfo(endinfo_num, info_num, info_name, start_day, end_day, code, info_link)
 select endinfonum.nextval, info_num, info_name, start_day, end_day, code, info_link
 from maininfo

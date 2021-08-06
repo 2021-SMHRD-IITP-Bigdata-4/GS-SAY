@@ -24,19 +24,27 @@ public class searchProgram extends HttpServlet {
 		String local = request.getParameter("local");
 		String category = request.getParameter("category");
 		String people = request.getParameter("people");
+		if (local.equals("전국")) {
+			local = "%";
+		}
+		if (category.equals("전체")) {
+			category = "%";
+		}
+		if (people.equals("전체")) {
+			people = "%";
+		}
 		String infoname = local + people+category;
 		
 		System.out.println(infoname);
 		
 		maininfoDAO dao = new maininfoDAO();
-		ArrayList<mainInfoDTO> searchInfo = null;
-		searchInfo = dao.code(infoname);
+		ArrayList<mainInfoDTO> searchDTO = dao.code(infoname);
 		
-		if(searchInfo != null) {
+		if(searchDTO != null) {
 			HttpSession session  = request.getSession();
-			session.setAttribute("searchInfo", searchInfo);
+			session.setAttribute("searchDTO", searchDTO);
 			System.out.println("전송완료");
-			response.sendRedirect("search.jsp");
+			response.sendRedirect("search.jsp?="+local+category+people);
 		}else{
 			System.out.println("전송실패");
 			response.sendRedirect("search.jsp");

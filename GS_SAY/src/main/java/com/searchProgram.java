@@ -29,7 +29,8 @@ public class searchProgram extends HttpServlet {
 		System.out.println(infoname);
 		
 		maininfoDAO dao = new maininfoDAO();
-		ArrayList<mainInfoDTO> searchInfo = dao.code(infoname);
+		ArrayList<mainInfoDTO> searchInfo = null;
+		searchInfo = dao.code(infoname);
 		
 		if(searchInfo != null) {
 			HttpSession session  = request.getSession();

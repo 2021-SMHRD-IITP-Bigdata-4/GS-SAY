@@ -52,7 +52,7 @@ public class maininfoDAO {
 
 	public ArrayList<mainInfoDTO> endinfo() {
 		conn();
-		String sql = "select * from maininfo order by end_day asc";
+		String sql = "select * from maininfo where end_day>sysdate order by end_day asc";
 		endDate = new ArrayList<mainInfoDTO>();
 		try {
 			psmt = conn.prepareStatement(sql);
@@ -106,7 +106,7 @@ public class maininfoDAO {
 	public ArrayList<mainInfoDTO> code(String infoname) {
 		conn();
 		try {
-			String sql = "select * from maininfo where code = (select code from category where cate_name = ?)";
+			String sql = "select * from maininfo where end_day>sysdate and code = (select code from category where cate_name = ?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, infoname);
 			rs = psmt.executeQuery();

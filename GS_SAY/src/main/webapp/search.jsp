@@ -1,3 +1,6 @@
+<%@page import="org.apache.catalina.filters.ExpiresFilter.XServletOutputStream"%>
+<%@page import="data.mainInfoDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="data.listDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -198,36 +201,21 @@
                     </tr>
                 </thead>
                    <tbody>
+                   <% ArrayList<mainInfoDTO> searchInfo=null;%>
+                   <% searchInfo = (ArrayList<mainInfoDTO>)session.getAttribute("searchInfo");%>
+                   <% if(searchInfo !=null){ %>
+                   <% System.out.println("전송완료");%>
+                   <% System.out.println(searchInfo.size());%>
+                   <% for(int i =0; i<searchInfo.size();i++){%>
                     <tr>
-                      <td>1</td><td></td><td></td><td><a href="#">지원제도이름</a></td><td><input type="submit" value="저장"></td>
+                      <td><%=i+1%></td><td><%= searchInfo.get(i).getStartDay()%></td><td><%=searchInfo.get(i).getEndDay()%></td>
+                      <td><a href="<%=searchInfo.get(i).getInfoLink()%>"></a><%=searchInfo.get(i).getInfoName()%></td><td><input type="submit" value="저장"></td>
                     </tr>
+                    <%}}else{ %>
                     <tr>
-                        <td>2</td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
+                        <td></td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
                     </tr>
-                    <tr>
-                        <td>3</td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
-                    </tr>
-                    <tr>
-                        <td>4</td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
-                    </tr>
-                    <tr>
-                        <td>5</td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
-                    </tr>
-                    <tr>
-                        <td>6</td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
-                    </tr>
-                    <tr>
-                        <td>7</td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
-                    </tr>
-                    <tr>
-                        <td>8</td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
-                    </tr>
-                    <tr>
-                        <td>9</td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
-                    </tr>
-                    <tr>
-                        <td>10</td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
-                    </tr>
+                    <% }%>
                   </tbody>
             </table>
         </div>

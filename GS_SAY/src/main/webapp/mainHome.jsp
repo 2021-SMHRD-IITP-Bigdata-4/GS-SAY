@@ -127,7 +127,6 @@
                     <div class="slidediv" >
                 	    <div class="head" style = "overflow:hidden; word-wrap:break-word;"><a href="<%= endDate.get(i).getInfoLink() %>"><%= endDate.get(i).getInfoName() %></a></div><br>
                         <div class="day"><%= endDate.get(i).getEndDay() %>¿œ±Ó¡ˆ</div>
-                	
                     </div>
                 <% } %>
                 <br><br>

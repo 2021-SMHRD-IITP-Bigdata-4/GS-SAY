@@ -65,7 +65,7 @@ public class maininfoDAO {
 				String infoLink = rs.getString(6);
 				
 				dto = new mainInfoDTO(infoNum, infoName, startDay, endDay, code, infoLink);
-				endDate.add(dto);
+				endDate.add(dto); 
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

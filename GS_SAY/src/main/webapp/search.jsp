@@ -145,7 +145,7 @@
                 <span>瘤开</span>
             </div>
             <div id="localchoice">
-                傈眉<input type="radio" name="local" class="localip" value="傈眉">
+                傈眉<input type="radio" name="local" class="localip" value="傈惫">
                 堡林<input type="radio" name="local" class="localip" value="堡林">
                 堡林 合备<input type="radio" name="local" class="localip" value="堡林合备">
                 堡林 巢备<input type="radio" name="local" class="localip" value="堡林巢备">

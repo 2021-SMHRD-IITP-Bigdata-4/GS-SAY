@@ -106,9 +106,14 @@ public class maininfoDAO {
 	public ArrayList<mainInfoDTO> code(String infoname) {
 		conn();
 		try {
+			if(infoname.equals("%%%")) {
+				String sql = "select * from maininfo where end_day>sysdate";
+				psmt = conn.prepareStatement(sql);
+			}else {
 			String sql = "select * from maininfo where end_day>sysdate and code = (select code from category where cate_name like ?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, infoname);
+			}
 			rs = psmt.executeQuery();
 			searchDto=new ArrayList<mainInfoDTO>();
 			while(rs.next()) {

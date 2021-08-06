@@ -17,6 +17,7 @@ public class maininfoDAO {
 	String pw = null;
 	mainInfoDTO dto = null;
 	ArrayList<mainInfoDTO> endDate = null;
+	ArrayList<mainInfoDTO> startDate = null;
 	
 	public void conn() {
 		try {
@@ -72,6 +73,32 @@ public class maininfoDAO {
 		} finally {
 			close();
 		} return endDate;
+	}
+	public ArrayList<mainInfoDTO> startinfo() {
+		conn();
+		String sql = "select * from maininfo order by start_day desc";
+		startDate = new ArrayList<mainInfoDTO>();
+		try {
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			
+			for (int i = 0; i < 8; i++) {
+				rs.next();
+				int infoNum = rs.getInt(1);
+				String infoName = rs.getString(2);
+				String startDay = rs.getString(3);
+				String endDay = rs.getString(4);
+				int code = rs.getInt(5);
+				String infoLink = rs.getString(6);
+				
+				dto = new mainInfoDTO(infoNum, infoName, startDay, endDay, code, infoLink);
+				startDate.add(dto); 
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		} return startDate;
 	}
 	
 }

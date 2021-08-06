@@ -107,7 +107,6 @@ public class maininfoDAO {
 	
 	public ArrayList<mainInfoDTO> code(String infoname) {
 		conn();
-		int resultnum = 0;
 		try {
 			String sql = "select * from maininfo where code = (select code from category where cate_name = ?)";
 			psmt = conn.prepareStatement(sql);

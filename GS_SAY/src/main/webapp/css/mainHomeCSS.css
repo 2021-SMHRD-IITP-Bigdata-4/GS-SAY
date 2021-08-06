@@ -74,6 +74,7 @@ span{
 .slidediv{
     width: 270px;
     display: inline-block;
+    white-space: normal;
 }
 .people{
     font-family: menufont; font-weight: bold; color: #2E64FE;
@@ -85,7 +86,7 @@ span{
 }
 .head{
     font-family: menufont; font-weight: bold; color: black;
-    font-size: 150%;
+    font-size: 150%; width: 260px;
 }
 .content{
     font-family: menufont; font-weight: bold; color: black;

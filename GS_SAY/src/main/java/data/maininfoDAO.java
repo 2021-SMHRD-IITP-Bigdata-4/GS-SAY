@@ -7,8 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import test.mainInfoDTO;
-
 public class maininfoDAO {
 	
 	int cnt = 0;

@@ -72,7 +72,7 @@ span{
     
 }
 .slidediv{
-    width: 270px;
+    width: 270px; height : 20%;
     display: inline-block;
     white-space: normal;
 }
@@ -86,7 +86,7 @@ span{
 }
 .head{
     font-family: menufont; font-weight: bold; color: black;
-    font-size: 150%; width: 260px;
+    font-size: 150%; width: 260px; text-decoration: none; vertical-align: top;
 }
 .content{
     font-family: menufont; font-weight: bold; color: black;

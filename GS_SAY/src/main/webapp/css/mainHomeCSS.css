@@ -72,9 +72,9 @@ span{
     
 }
 .slidediv{
-    width: 270px;
+    width: 270px; height : 20%;
     display: inline-block;
-    white-space: normal;
+    white-space: normal; vertical-align: top;
 }
 .people{
     font-family: menufont; font-weight: bold; color: #2E64FE;
@@ -86,7 +86,11 @@ span{
 }
 .head{
     font-family: menufont; font-weight: bold; color: black;
-    font-size: 150%; width: 260px;
+    font-size: 150%; width: 260px; height:170px;
+    text-overflow: ellipsis;
+}
+.head > a{
+	text-decoration: none; color: black;
 }
 .content{
     font-family: menufont; font-weight: bold; color: black;

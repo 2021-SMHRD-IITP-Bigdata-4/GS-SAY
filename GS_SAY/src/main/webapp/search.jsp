@@ -136,19 +136,19 @@
             </div>
         </div>
         <!--선택하기-->
-        <form action="#">
+        <form action="searchProgram">
         <div id = localselect>
             <div id="localteg">
                 <span>지역</span>
             </div>
             <div id="localchoice">
-                전체<input type="radio" name="local" class="localip">
-                광주<input type="radio" name="local" class="localip">
-                광주 북구<input type="radio" name="local" class="localip">
-                광주 남구<input type="radio" name="local" class="localip">
-                광주 서구<input type="radio" name="local" class="localip">
-                광주 동구<input type="radio" name="local" class="localip">
-                광주 광산구<input type="radio" name="local" class="localip">
+                전체<input type="radio" name="local" class="localip" value="전체">
+                광주<input type="radio" name="local" class="localip" value="광주">
+                광주 북구<input type="radio" name="local" class="localip" value="광주북구">
+                광주 남구<input type="radio" name="local" class="localip" value="광주남구">
+                광주 서구<input type="radio" name="local" class="localip" value="광주서구">
+                광주 동구<input type="radio" name="local" class="localip" value="광주동구">
+                광주 광산구<input type="radio" name="local" class="localip" value="광주광산구">
             </div>
         </div>
         <div id = "categoryselect">
@@ -156,12 +156,12 @@
                 <span>분류</span>
             </div>
             <div id="categorychoice">
-                전체<input type="radio" name="category" class="localip">
-                교육<input type="radio" name="category" class="localip">
-                고용/창업<input type="radio" name="category" class="localip">
-                주거<input type="radio" name="category" class="localip">
-                건강<input type="radio" name="category" class="localip">
-                기타<input type="radio" name="category" class="localip">
+                전체<input type="radio" name="category" class="localip" value="전체">
+                교육<input type="radio" name="category" class="localip" value="교육">
+                고용/창업<input type="radio" name="category" class="localip" value="고용">
+                주거<input type="radio" name="category" class="localip" value="주거">
+                건강<input type="radio" name="category" class="localip" value="건강">
+                기타<input type="radio" name="category" class="localip" value="기타">
             </div>
         </div>
         <div id = "peopleselect">
@@ -169,18 +169,18 @@
                 <span>대상</span>
             </div>
             <div id="peoplechoice">
-                전체<input type="radio" name="people" class="localip">
-                대학생/대학원생<input type="radio" name="people" class="localip">
-                군인<input type="radio" name="people" class="localip">
-                구직/이직희망자/실업자<input type="radio" name="people" class="localip">
-                재직자<input type="radio" name="people" class="localip">
-                창업자/예비창업자<input type="radio" name="people" class="localip">
-                장애인<input type="radio" name="people" class="localip">
-                임신부<input type="radio" name="people" class="localip">
+                전체<input type="radio" name="people" class="localip" value="전체">
+                대학생/대학원생<input type="radio" name="people" class="localip" value="대학생">
+                군인<input type="radio" name="people" class="localip" value="군인">
+                구직/이직희망자/실업자<input type="radio" name="people" class="localip" value="구직">
+                재직자<input type="radio" name="people" class="localip" value="재직자">
+                창업자/예비창업자<input type="radio" name="people" class="localip" value="창업자">
+                장애인<input type="radio" name="people" class="localip" value="장애인">
+                임신부<input type="radio" name="people" class="localip" value="임신부">
             </div>
         </div>
         <div id = "go">
-            <input class="menubutton" type="button" value="검색하기">
+            <input class="menubutton" type="submit" value="검색하기">
         </div>
         </form>
         <div id="tablebox">

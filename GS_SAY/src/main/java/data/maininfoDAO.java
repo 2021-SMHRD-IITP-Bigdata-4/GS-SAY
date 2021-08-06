@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class maininfoDAO {
@@ -17,6 +18,8 @@ public class maininfoDAO {
 	String pw = null;
 	mainInfoDTO dto = null;
 	ArrayList<mainInfoDTO> endDate = null;
+	ArrayList<mainInfoDTO> startDate = null;
+	ArrayList<mainInfoDTO> searchDto = null;
 	
 	public void conn() {
 		try {
@@ -73,5 +76,55 @@ public class maininfoDAO {
 			close();
 		} return endDate;
 	}
+	public ArrayList<mainInfoDTO> startinfo() {
+		conn();
+		String sql = "select * from maininfo order by start_day desc";
+		startDate = new ArrayList<mainInfoDTO>();
+		try {
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			
+			for (int i = 0; i < 8; i++) {
+				rs.next();
+				int infoNum = rs.getInt(1);
+				String infoName = rs.getString(2);
+				String startDay = rs.getString(3);
+				String endDay = rs.getString(4);
+				int code = rs.getInt(5);
+				String infoLink = rs.getString(6);
+				
+				dto = new mainInfoDTO(infoNum, infoName, startDay, endDay, code, infoLink);
+				startDate.add(dto); 
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		} return startDate;
+	}
+	
+	public ArrayList<mainInfoDTO> code(String infoname) {
+		conn();
+		try {
+			String sql = "select * from maininfo where code = (select code from category where cate_name = ?)";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, infoname);
+			rs = psmt.executeQuery();
+			searchDto=new ArrayList<mainInfoDTO>();
+			while(rs.next()) {
+				int infoNum = rs.getInt(1);
+				String infoName = rs.getString(2);
+				String startDay = rs.getString(3);
+				String endDay = rs.getString(4);
+				int code = rs.getInt(5);
+				String infoLink = rs.getString(6);
+				dto = new mainInfoDTO(infoNum, infoName, startDay, endDay, code, infoLink);
+				searchDto.add(dto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();}
+		return searchDto;}
 	
 }

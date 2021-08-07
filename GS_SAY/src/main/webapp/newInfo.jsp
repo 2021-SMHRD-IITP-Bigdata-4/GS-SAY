@@ -65,7 +65,7 @@
             font-weight: bold; font-size: 160%;
         }
         #new{
-            width: 17%; position: absolute; margin-top: 0.5%; margin-left: 16%; margin-right: 15%; width:18%; height: 15%; font-size: 60%;
+            width: 17%; position: absolute; margin-top: 0.4%; margin-left: 13%; margin-right: 15%; width:18%; height: 15%; font-size: 60%;
         }
         #field{
             position: absolute; top: 50%; margin-left: 66%; margin-right: 0%;
@@ -74,7 +74,7 @@
             position: absolute; top: 50%; margin-left: 76%; margin-right: 0%;
         }
         #table{
-            position: absolute; width:70%; top:58%; margin-left: 15%; margin-right: 16%;
+            position: absolute; width:70%; top:54%; margin-left: 15%; margin-right: 16%;
             border-top: 1px solid #444444;
             border-collapse: collapse;
         }
@@ -83,7 +83,7 @@
             padding:10px;
         }
         #button{
-            position: absolute; width:70%; top:135%; margin-left: 15%; text-align: center;
+            position: absolute; width:70%; top:178%; margin-left: 15%; text-align: center;
         }
         .button{
             font-size: 20px; width: 50px; height: 50px; background-color:#C1DDFF; border-radius: 10%;
@@ -174,6 +174,7 @@
         <input class="button" type="button" value="4" id="b4">
         <input class="button" type="button" value="5" id="b5">
         <input class="button" type="button" value=">" id="fo">
+        <br><br><br><br><br><br><br><br><br>
    </div>
 </body>
 </html>

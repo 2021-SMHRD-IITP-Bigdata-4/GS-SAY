@@ -167,12 +167,10 @@
                  <!--       <span class="dmd">(D-5)</span>  -->
                     </div>
                 <% } %>
-                <br><br>
             </div>
+            
         </div>
-        <div id="yo">
-            여기는 여백입니다
-        </div>
+        
     </div>
 </body>
 </html>

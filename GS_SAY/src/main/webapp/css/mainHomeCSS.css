@@ -60,7 +60,7 @@ span{
     font-size: 200%; font-weight: bold; 
 }
 #efb3{
-    width: 22%; line-height: 300%;
+    width: 22%; line-height: 300%; margin-left: 2%;
 }
 
 #ebtn{
@@ -121,7 +121,7 @@ span{
     font-size: 200%; font-weight: bold; 
 }
 #nfb3{
-    width: 38%; line-height: 300%; text-decoration: none;
+    width: 38%; line-height: 300%; text-decoration: none; margin-left: 2%;
 }
 #nfb3 a{
     text-decoration: none;
@@ -133,12 +133,12 @@ span{
 /*신규지원제도 슬라이드*/
 #newslidebox{
     display: flex; top: 159%; margin-left: 15%; margin-right: 15%;  position: absolute;
-     width: 70%;
+     width: 70%; padding-bottom: 7.5%;
 }
 #nsb{
     width: 100%; overflow: auto; white-space:nowrap;
     
 }
 #yo{
-    font-size: 200%; color: white; top: 123%; position: absolute;
+    font-size: 200%; color: white; top: 150%; position: absolute;
 }

@@ -1,3 +1,6 @@
+<%@page import="data.myScrapDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="data.myScrapDAO"%>
 <%@page import="data.listDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -94,56 +97,15 @@
                 <td class="t2"><span>¡¶µµ ¡æ∑·¿œ</span></td>
                 <td class="t3"><span>¡¶µµ∏Ì</span></td>
             </tr>
+            <% myScrapDAO dao = new myScrapDAO(); %>
+            <% ArrayList<myScrapDTO> scrapView = dao.scrapView(login); %>
+            <% for (int i = 0; i < scrapView.size(); i++) {%>
             <tr>
-                <td><span>1</span></td>
-                <td><span>07.15</span><span class="dday">(D-8)</span></td>
-                <td><span>2021≥‚ 2«–±‚ ≥Û√Ã»Ò∏¡¿Á¥‹ ¿Â«–±›</span></td>
+                <td><span><%= i+1 %></span></td>
+                <td><span><%= scrapView.get(i).getEndDay() %></span></td>
+                <td><span><a id="info" href="<%= scrapView.get(i).getInfoLink() %>"><%= scrapView.get(i).getInfoName() %></a></span></td>
             </tr>
-            <tr>
-                <td><span>2</span></td>
-                <td><span></span><span class="dday"></span></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td><span>3</span></td>
-                <td><span></span><span class="dday"></span></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td><span>4</span></td>
-                <td><span></span><span class="dday"></span></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td><span>5</span></td>
-                <td><span></span><span class="dday"></span></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td><span>6</span></td>
-                <td><span></span><span class="dday"></span></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td><span>7</span></td>
-                <td><span></span><span class="dday"></span></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td><span>8</span></td>
-                <td><span></span><span class="dday"></span></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td><span>9</span></td>
-                <td><span></span><span class="dday"></span></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td><span>10</span></td>
-                <td><span></span><span class="dday"></span></td>
-                <td><span></span></td>
-            </tr>
+            <% } %>
         </table>
     </div>
 </body>

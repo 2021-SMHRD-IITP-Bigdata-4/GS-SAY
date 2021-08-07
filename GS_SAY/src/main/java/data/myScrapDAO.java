@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpSession;
 
@@ -18,7 +20,8 @@ public class myScrapDAO {
 	String name = null;
 	String id = null;
 	String pw = null;
-	mainInfoDTO dto = null;
+	myScrapDTO dto = null;
+	ArrayList<myScrapDTO> scrapView = null;
 	
 	public void conn() {
 		try {
@@ -63,5 +66,38 @@ public class myScrapDAO {
 		} finally {
 			close();
 	} return cnt;
-}
+	}
+	
+	public ArrayList<myScrapDTO> scrapView(listDTO login) {
+		conn();
+		
+		String sql = "select * from myscrap where member_id = ?";
+		scrapView = new ArrayList<myScrapDTO>();
+		try {
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1, login.getId());
+		rs = psmt.executeQuery();
+		
+		while (rs.next()) {
+			int scrap_num = rs.getInt(1);
+			String member_id = rs.getString(2);
+			int info_num = rs.getInt(3);
+			String end_day = rs.getString(4);
+			String info_name = rs.getString(5);
+			String info_link = rs.getString(6);
+			
+			dto = new myScrapDTO(scrap_num, member_id, info_num, end_day, info_name, info_link);
+			scrapView.add(dto);
+		}
+		
+		for (int i = 0; i < 10; i++)
+			System.out.println(i);
+		
+		} catch (SQLException e) { 
+			e.printStackTrace();
+		} finally {
+			close();
+		} return scrapView;
+	}
+
 }

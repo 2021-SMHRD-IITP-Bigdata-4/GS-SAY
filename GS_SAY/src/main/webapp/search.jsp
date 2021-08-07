@@ -191,9 +191,9 @@
                 <thead>
                     <tr>
                         <th colspan="5" style="font-size: 130%; height: 40px; background-color: #9FCAFF; font-weight: bold; font-family: menufont; text-align: left;" >&nbsp&nbsp&nbsp&nbsp&nbsp나의 선택 : 
-                        <% if (request.getParameter("local") != null) {%>
+                   
                         <%=request.getParameter("local")%>, <%=request.getParameter("category") %>, <%= request.getParameter("people") %>
-                        <% } %></th>
+                        </th>
                     </tr>
                     <tr style="background-color:#C1DDFF;">
                         <th width="7%" style="font-size: 110%; height: 40px;">No.</th>

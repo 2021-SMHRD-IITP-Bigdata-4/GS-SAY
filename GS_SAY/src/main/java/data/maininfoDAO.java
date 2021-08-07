@@ -110,7 +110,7 @@ public class maininfoDAO {
 				String sql = "select * from maininfo where end_day>sysdate";
 				psmt = conn.prepareStatement(sql);
 			}else {
-			String sql = "select * from maininfo where end_day>sysdate and code = (select code from category where cate_name like ?)";
+			String sql = "select * from maininfo where end_day>sysdate and code in (select code from category where cate_name like ?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, infoname);
 			}

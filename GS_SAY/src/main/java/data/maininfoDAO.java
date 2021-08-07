@@ -18,7 +18,9 @@ public class maininfoDAO {
 	String pw = null;
 	mainInfoDTO dto = null;
 	ArrayList<mainInfoDTO> endDate = null;
+	ArrayList<mainInfoDTO> endDateMore = null;
 	ArrayList<mainInfoDTO> startDate = null;
+	ArrayList<mainInfoDTO> startDateMore = null;
 	ArrayList<mainInfoDTO> searchDto = null;
 	
 	public void conn() {
@@ -78,7 +80,7 @@ public class maininfoDAO {
 	}
 	public ArrayList<mainInfoDTO> startinfo() {
 		conn();
-		String sql = "select * from maininfo order by start_day desc";
+		String sql = "select * from maininfo where end_day>sysdate order by start_day desc";
 		startDate = new ArrayList<mainInfoDTO>();
 		try {
 			psmt = conn.prepareStatement(sql);
@@ -132,4 +134,57 @@ public class maininfoDAO {
 			close();}
 		return searchDto;}
 	
+	public ArrayList<mainInfoDTO> endinfoMore() {
+		conn();
+		String sql = "select * from maininfo where end_day>sysdate order by end_day asc";
+		endDateMore = new ArrayList<mainInfoDTO>();
+		try {
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			
+			for (int i = 0; i < 20; i++) {
+				rs.next();
+				int infoNum = rs.getInt(1);
+				String infoName = rs.getString(2);
+				String startDay = rs.getString(3);
+				String endDay = rs.getString(4);
+				int code = rs.getInt(5);
+				String infoLink = rs.getString(6);
+				
+				dto = new mainInfoDTO(infoNum, infoName, startDay, endDay, code, infoLink);
+				endDateMore.add(dto); 
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		} return endDateMore;
+	}
+	
+	public ArrayList<mainInfoDTO> startinfoMore() {
+		conn();
+		String sql = "select * from maininfo where end_day>sysdate order by start_day desc";
+		startDateMore = new ArrayList<mainInfoDTO>();
+		try {
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			
+			for (int i = 0; i < 20; i++) {
+				rs.next();
+				int infoNum = rs.getInt(1);
+				String infoName = rs.getString(2);
+				String startDay = rs.getString(3);
+				String endDay = rs.getString(4);
+				int code = rs.getInt(5);
+				String infoLink = rs.getString(6);
+				
+				dto = new mainInfoDTO(infoNum, infoName, startDay, endDay, code, infoLink);
+				startDateMore.add(dto); 
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		} return startDateMore;
+	}
 }

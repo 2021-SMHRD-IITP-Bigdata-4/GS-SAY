@@ -1,3 +1,6 @@
+<%@page import="data.mainInfoDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="data.maininfoDAO"%>
 <%@page import="data.listDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -85,6 +88,13 @@
         .button{
             font-size: 20px; width: 50px; height: 50px; background-color:#C1DDFF; border-radius: 10%;
         }
+        #info:hover {
+        	text-decoration: underline;
+        }
+        #info{
+        	text-decoration: none; font-weight: bold; color: black; 
+        }
+        
 
     </style>
      
@@ -129,28 +139,7 @@
                 </div> 
             </div>
         </div>
-        <div id = "field">
-            <select name="field" style="width: 170px; height: 40px; font-size: 100%;">
-                <option value="">분야 선택</option>
-                <option value="지역">지역</option>
-                <option value="교육">교육</option>
-                <option value="고용/창업">고용 / 창업</option>
-                <option value="주거">주거</option>
-                <option value="건강및기타">건강 및 기타</option>
-            </select>
-        </div>
-        <div id = "target">
-            <select name="target" style="width: 170px; height: 40px; font-size: 100%;">
-                <option value="">대상 선택</option>
-                <option value="대학생/대학원생">대학생/대학원생</option>
-                <option value="군인">군인</option>
-                <option value="구직/이직희망/실업자">구직/이직희망/실업자</option>
-                <option value="재직자">재직자</option>
-                <option value="창업자/예비창업자">창업자 / 예비창업자</option>
-                <option value="장애인">장애인</option>
-                <option value="임신부">임신부</option>
-            </select>
-        </div>
+        
     </div>
     <table id="table" style="text-align: center;">
         <thead>
@@ -158,42 +147,23 @@
                 <th colspan="5" style="font-size: 130%; height: 40px; background-color: #9FCAFF; font-weight: bold;" >전 체</th>
             </tr>
             <tr style="background-color:#C1DDFF;">
-                <th width="5%" style="font-size: 110%; height: 40px;">No.</th><th width="20%" style="font-size: 110%; height: 40px;">시작일
-                </th><th width="20%" style="font-size: 110%; height: 40px;">분야</th><th width="25%" style="font-size: 110%; height: 40px;">대상
-                </th><th width="30%" style="font-size: 110%; height: 40px;">제도명</th>
+                <th width="7%" style="font-size: 110%; height: 40px;">No.</th>
+                <th width="14%" style="font-size: 110%; height: 40px;">시작일</th>
+                <th width="14%" style="font-size: 110%; height: 40px;">종료일</th>
+                <th width="65%" style="font-size: 110%; height: 40px;">대상</th>
             </tr>
         </thead>
           <tbody>
+          <% maininfoDAO dao = new maininfoDAO(); %>
+          <% ArrayList<mainInfoDTO> startDateMore = dao.startinfoMore(); %>
+          <% for (int i = 0; i < startDateMore.size(); i++) {%>
             <tr>
-              <td style="font-size: 100%; height: 40px; font-weight: bold;">1</td><td></td><td></td><td></td><td></td>
+              <td style="font-size: 100%; height: 40px; font-weight: bold;"><%= i+1 %></td>
+              <td><%= startDateMore.get(i).getStartDay() %></td>
+              <td><%= startDateMore.get(i).getEndDay() %></td>
+              <td><a id="info" href="<%= startDateMore.get(i).getInfoLink() %>"><%= startDateMore.get(i).getInfoName() %></a></td>
             </tr>
-            <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">2</td><td></td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">3</td><td></td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">4</td><td></td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">5</td><td></td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">6</td><td></td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">7</td><td></td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">8</td><td></td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">9</td><td></td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-                <td style="font-size: 100%; height: 40px; font-weight: bold;">10</td><td></td><td></td><td></td><td></td>
-            </tr>
+          <% } %>  
           </tbody>
     </table>
     <div id="button">

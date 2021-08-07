@@ -106,6 +106,9 @@
             font-size: 20px; width: 130px; height: 50px; color:#FF853F; background-color:#FFE4C4; border-radius: 8%; font-weight: bold; 
             border-color: #FF853F;
         }
+        #needbox{
+       	 width: 100%; position: absolute; text-align: center; font-family: menufont;  font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -187,13 +190,18 @@
         </div>
         </form>
         <div id="tablebox">
-            <table id="table">
+            <% ArrayList<mainInfoDTO> searchDTO = (ArrayList<mainInfoDTO>)session.getAttribute("searchDTO");%>
+                   <% if(searchDTO !=null){ %>
+                   <% System.out.println("전송완료");%>
+                   <% System.out.println(searchDTO.size());%>
+                   
+                    <table id="table">
                 <thead>
                     <tr>
                         <th colspan="5" style="font-size: 130%; height: 40px; background-color: #9FCAFF; font-weight: bold; font-family: menufont; text-align: left;" >&nbsp&nbsp&nbsp&nbsp&nbsp나의 선택 : 
-                   
+                        <% if (request.getParameter("local") != null) {%>
                         <%=request.getParameter("local")%>, <%=request.getParameter("category") %>, <%= request.getParameter("people") %>
-                        </th>
+                        <% } %></th>
                     </tr>
                     <tr style="background-color:#C1DDFF;">
                         <th width="7%" style="font-size: 110%; height: 40px;">No.</th>
@@ -204,22 +212,20 @@
                     </tr>
                 </thead>
                    <tbody>
-                   <% ArrayList<mainInfoDTO> searchDTO = (ArrayList<mainInfoDTO>)session.getAttribute("searchDTO");%>
-                   <% if(searchDTO !=null){ %>
-                   <% System.out.println("전송완료");%>
-                   <% System.out.println(searchDTO.size());%>
+                   
                    <% for(int i =0; i<searchDTO.size();i++){%>
+                   <form action="myInfoProgram?="<%=+searchDTO.get(i).getCode()%>>
                     <tr>
                       <td><%=i+1%></td><td><%= searchDTO.get(i).getStartDay()%></td><td><%=searchDTO.get(i).getEndDay()%></td>
                       <td><a href="<%=searchDTO.get(i).getInfoLink()%>"></a><%=searchDTO.get(i).getInfoName()%></td><td><input type="submit" value="저장"></td>
                     </tr>
-                    <%}}else{ %>
-                    <tr>
-                        <td></td><td></td><td></td><td></td><td><input type="submit" value="저장"></td>
-                    </tr>
+                    </form>
+                    <%}%>
+                    	</tbody>
+            		</table>
+                   <%}else{ %>
+                    <div id = "needbox">지역 분류 대상을 선택하세요!</div>
                     <% }%>
-                  </tbody>
-            </table>
         </div>
     </div>
 </body>

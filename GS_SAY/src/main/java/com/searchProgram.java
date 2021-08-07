@@ -25,6 +25,9 @@ public class searchProgram extends HttpServlet {
 		String category = request.getParameter("category");
 		String people = request.getParameter("people");
 		
+		if(local !=null && category !=null && people!=null) {
+			
+		
 		if (local.equals("전국")) {
 			local = "%";
 		}
@@ -49,6 +52,9 @@ public class searchProgram extends HttpServlet {
 			response.sendRedirect("search.jsp?="+local+category+people);
 		}else{
 			System.out.println("전송실패");
+			response.sendRedirect("search.jsp");
+		}}else {
+			System.out.println("선택널 값");
 			response.sendRedirect("search.jsp");
 		}
 	}

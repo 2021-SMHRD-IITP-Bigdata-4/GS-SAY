@@ -109,6 +109,12 @@
         #needbox{
        	 width: 100%; position: absolute; text-align: center; font-family: menufont;  font-weight: bold;
         }
+        #info:hover {
+        	text-decoration: underline;
+        }
+        #info{
+        	text-decoration: none; font-weight: bold; color: black; 
+        }
     </style>
 </head>
 <body>
@@ -216,8 +222,10 @@
                    <% for(int i =0; i<searchDTO.size();i++){%>
                    <form action="myInfoProgram?="<%=+searchDTO.get(i).getCode()%>>
                     <tr>
-                      <td><%=i+1%></td><td><%= searchDTO.get(i).getStartDay()%></td><td><%=searchDTO.get(i).getEndDay()%></td>
-                      <td><a href="<%=searchDTO.get(i).getInfoLink()%>"></a><%=searchDTO.get(i).getInfoName()%></td><td><input type="submit" value="저장"></td>
+                      <td><%=i+1%></td><td><%= searchDTO.get(i).getStartDay()%></td>
+                      <td><%=searchDTO.get(i).getEndDay()%></td>
+                      <td><a id="info" href="<%=searchDTO.get(i).getInfoLink()%>"><%=searchDTO.get(i).getInfoName()%></a></td>
+                      <td><input type="submit" value="저장"></td>
                     </tr>
                     </form>
                     <%}%>

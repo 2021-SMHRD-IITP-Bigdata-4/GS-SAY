@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class maininfoDAO {
 	
@@ -53,31 +55,39 @@ public class maininfoDAO {
 	}
 
 	public ArrayList<mainInfoDTO> endinfo() {
-		conn();
-		String sql = "select * from maininfo where end_day>sysdate order by end_day asc";
-		endDate = new ArrayList<mainInfoDTO>();
-		try {
-			psmt = conn.prepareStatement(sql);
-			rs = psmt.executeQuery();
-			
-			for (int i = 0; i < 8; i++) {
-				rs.next();
-				int infoNum = rs.getInt(1);
-				String infoName = rs.getString(2);
-				String startDay = rs.getString(3);
-				String endDay = rs.getString(4);
-				int code = rs.getInt(5);
-				String infoLink = rs.getString(6);
-				
-				dto = new mainInfoDTO(infoNum, infoName, startDay, endDay, code, infoLink);
-				endDate.add(dto); 
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close();
-		} return endDate;
-	}
+	      conn();
+	      String sql = "select * from maininfo where end_day>sysdate order by end_day asc";
+	      endDate = new ArrayList<mainInfoDTO>();
+
+	      try {
+	         psmt = conn.prepareStatement(sql);
+	         rs = psmt.executeQuery();
+	         
+	         for (int i = 0; i < 8; i++) {
+	            rs.next();
+	            int infoNum = rs.getInt(1);
+	            String infoName = rs.getString(2);
+	            
+	            String startDay = rs.getString(3);
+	            SimpleDateFormat beforeformatter =new SimpleDateFormat("yyyy-MM-dd 00:00:00");
+	            SimpleDateFormat formatter =new SimpleDateFormat("yyyy-MM-dd ");
+	            Date formatDate = beforeformatter.parse(startDay);
+	            String newstartDay = formatter.format(formatDate);
+	            
+	            String endDay = rs.getString(4);
+	            int code = rs.getInt(5);
+	            String infoLink = rs.getString(6);
+	            
+	            dto = new mainInfoDTO(infoNum, infoName, newstartDay, endDay, code, infoLink);
+	            endDate.add(dto); 
+	         }
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         close();
+	      } return endDate;
+	   }
+	
 	public ArrayList<mainInfoDTO> startinfo() {
 		conn();
 		String sql = "select * from maininfo where end_day>sysdate order by start_day desc";

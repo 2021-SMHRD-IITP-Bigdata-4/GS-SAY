@@ -55,6 +55,8 @@ public class searchProgram extends HttpServlet {
 			System.out.println("전송실패");
 			response.sendRedirect("search.jsp");
 		}}else {
+			HttpSession session  = request.getSession();
+			session.removeAttribute("searchDTO");
 			System.out.println("선택널 값");
 			response.sendRedirect("search.jsp");
 		}

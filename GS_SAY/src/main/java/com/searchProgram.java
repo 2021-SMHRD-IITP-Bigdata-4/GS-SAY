@@ -24,6 +24,7 @@ public class searchProgram extends HttpServlet {
 		String local = request.getParameter("local");
 		String category = request.getParameter("category");
 		String people = request.getParameter("people");
+		
 		if (local.equals("전국")) {
 			local = "%";
 		}
@@ -33,6 +34,7 @@ public class searchProgram extends HttpServlet {
 		if (people.equals("전체")) {
 			people = "%";
 		}
+		
 		String infoname = local + people+category;
 		
 		System.out.println(infoname);

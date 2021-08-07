@@ -120,6 +120,7 @@
             </nav>
             <% } %>
         </div>
+        
         <div id="tegbox1">
             <div id= "tegbox2">
                 <img id = "teg" src="img/tege.bmp">

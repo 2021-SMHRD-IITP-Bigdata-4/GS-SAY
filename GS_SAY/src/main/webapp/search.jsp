@@ -221,14 +221,13 @@
                    <tbody>
                    
                    <% for(int i =0; i<searchDTO.size();i++){%>
-                   <form action="myInfoProgram?="<%=+searchDTO.get(i).getCode()%>>
                     <tr>
                       <td><%=i+1%></td><td><%= searchDTO.get(i).getStartDay()%></td>
                       <td><%=searchDTO.get(i).getEndDay()%></td>
                       <td><a id="info" href="<%=searchDTO.get(i).getInfoLink()%>"><%=searchDTO.get(i).getInfoName()%></a></td>
-                      <td><input type="submit" value="저장"></td>
+                      <td><a id="info" href="myInfoProgram?num=<%=+searchDTO.get(i).getInfoNum()%>">저장</a></td>
                     </tr>
-                    </form>
+                    
                     <%}%>
                     	</tbody>
             		</table>

@@ -1,6 +1,7 @@
 package com;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -24,7 +25,7 @@ public class searchProgram extends HttpServlet {
 		String local = request.getParameter("local");
 		String category = request.getParameter("category");
 		String people = request.getParameter("people");
-		
+		String tablename = local +" / " + people+ " / "+category;
 		if(local !=null && category !=null && people!=null) {
 			
 		
@@ -41,7 +42,7 @@ public class searchProgram extends HttpServlet {
 		String infoname = local + people+category;
 		
 		System.out.println(infoname);
-		
+		System.out.println(tablename);
 		maininfoDAO dao = new maininfoDAO();
 		ArrayList<mainInfoDTO> searchDTO = dao.code(infoname);
 		
@@ -49,7 +50,7 @@ public class searchProgram extends HttpServlet {
 			HttpSession session  = request.getSession();
 			session.setAttribute("searchDTO", searchDTO);
 			System.out.println("전송완료");
-			response.sendRedirect("search.jsp?="+local+category+people);
+			response.sendRedirect("search.jsp?name="+URLEncoder.encode(tablename));
 		}else{
 			System.out.println("전송실패");
 			response.sendRedirect("search.jsp");

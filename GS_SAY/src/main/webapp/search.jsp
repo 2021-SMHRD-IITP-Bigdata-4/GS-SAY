@@ -154,7 +154,7 @@
                 <span>瘤开</span>
             </div>
             <div id="localchoice">
-                傈眉<input type="radio" name="local" class="localip" value="傈惫">
+                傈惫<input type="radio" name="local" class="localip" value="傈惫">
                 堡林<input type="radio" name="local" class="localip" value="堡林">
                 堡林 合备<input type="radio" name="local" class="localip" value="堡林合备">
                 堡林 巢备<input type="radio" name="local" class="localip" value="堡林巢备">
@@ -205,9 +205,10 @@
                 <thead>
                     <tr>
                         <th colspan="5" style="font-size: 130%; height: 40px; background-color: #9FCAFF; font-weight: bold; font-family: menufont; text-align: left;" >&nbsp&nbsp&nbsp&nbsp&nbsp唱狼 急琶 : 
-                        <% if (request.getParameter("local") != null) {%>
-                        <%=request.getParameter("local")%>, <%=request.getParameter("category") %>, <%= request.getParameter("people") %>
-                        <% } %></th>
+                        <%request.setCharacterEncoding("EUC-KR"); %>
+                        <%String name = request.getParameter("name");%>
+                        <%=name %>
+                        </th>
                     </tr>
                     <tr style="background-color:#C1DDFF;">
                         <th width="7%" style="font-size: 110%; height: 40px;">No.</th>

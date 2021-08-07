@@ -49,6 +49,12 @@
         #myteg{
             width: 100%;
         }
+        #info:hover {
+        	text-decoration: underline;
+        }
+        #info{
+        	text-decoration: none; font-weight: bold; color: black; 
+        }
     </style> 
 </head>
 <body>

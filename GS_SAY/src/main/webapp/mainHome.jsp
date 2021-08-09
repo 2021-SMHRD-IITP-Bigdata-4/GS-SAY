@@ -144,8 +144,38 @@
             	<% maininfoDAO dao = new maininfoDAO(); %>
             	<% ArrayList<mainInfoDTO> endDate = dao.endinfo(); %>
             	<% for (int i = 0; i < endDate.size(); i++) {%>
-            	<% String dateF = endDate.get(i).getEndDay(); %>
                     <div class="slidediv">
+                    	<% if (((endDate.get(i).getCode()-1)/6)/8 == 0) { %>
+						<span class="people">[전체]</span>
+						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 1) { %>
+						<span class="people">[대학생/대학원생]</span>
+						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 2) { %>
+						<span class="people">[군인]</span>
+						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 3) { %>
+						<span class="people">[구직/이직자/실업자]</span>
+						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 4) { %>
+						<span class="people">[재직자]</span>
+						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 5) { %>
+						<span class="people">[창업자/예비창업자]</span>
+						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 6) { %>
+						<span class="people">[장애인]</span>
+						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 7) { %>
+						<span class="people">[임신부]</span>
+						<% } %>
+						
+						<% if ((endDate.get(i).getCode()-1)% 6 == 0) { %>
+						<span class="people">[전체]</span>
+						<% } else if((endDate.get(i).getCode()-1)% 6 == 1) { %>
+						<span class="people">[교육]</span>
+						<% } else if((endDate.get(i).getCode()-1)% 6 == 2) { %>
+						<span class="people">[창업/고용]</span>
+						<% } else if((endDate.get(i).getCode()-1)% 6 == 3) { %>
+						<span class="people">[주거]</span>
+						<% } else if((endDate.get(i).getCode()-1)% 6 == 4) { %>
+						<span class="people">[건강]</span>
+						<% } else if((endDate.get(i).getCode()-1)% 6 == 5 ) { %>
+						<span class="people">[기타]</span>
+						<% } %>
                 	    <div class="head" style = "overflow:hidden; word-wrap:break-word;"><a href="<%= endDate.get(i).getInfoLink() %>"><%= endDate.get(i).getInfoName() %></a></div><br>
                         <div class="day"><%= endDate.get(i).getEndDay().substring(0, 11) %> 까지</div>
                     </div>
@@ -174,11 +204,40 @@
             	<% ArrayList<mainInfoDTO> startDate = dao.startinfo(); %>
                 <% for (int i = 0; i < startDate.size(); i++) {%>
                     <div class="slidediv">
-                 <!--       <span class="people">[대학생/대학원생]</span>
-                        <span class="category">[교육]</span><br><br>  -->
+						<% if (((startDate.get(i).getCode()-1)/6)/8 == 0) { %>
+						<span class="people">[전체]</span>
+						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 1) { %>
+						<span class="people">[대학생/대학원생]</span>
+						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 2) { %>
+						<span class="people">[군인]</span>
+						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 3) { %>
+						<span class="people">[구직/이직자/실업자]</span>
+						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 4) { %>
+						<span class="people">[재직자]</span>
+						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 5) { %>
+						<span class="people">[창업자/예비창업자]</span>
+						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 6) { %>
+						<span class="people">[장애인]</span>
+						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 7) { %>
+						<span class="people">[임신부]</span>
+						<% } %>
+						
+						<% if ((startDate.get(i).getCode()-1)% 6 == 0) { %>
+						<span class="people">[전체]</span>
+						<% } else if((startDate.get(i).getCode()-1)% 6 == 1) { %>
+						<span class="people">[교육]</span>
+						<% } else if((startDate.get(i).getCode()-1)% 6 == 2) { %>
+						<span class="people">[창업/고용]</span>
+						<% } else if((startDate.get(i).getCode()-1)% 6 == 3) { %>
+						<span class="people">[주거]</span>
+						<% } else if((startDate.get(i).getCode()-1)% 6 == 4) { %>
+						<span class="people">[건강]</span>
+						<% } else if((startDate.get(i).getCode()-1)% 6 == 5 ) { %>
+						<span class="people">[기타]</span>
+						<% } %>
                         <div class="head" style = "overflow:hidden; word-wrap:break-word;"><a href="<%=startDate.get(i).getInfoLink() %>"><%= startDate.get(i).getInfoName() %></a></div><br>
                  <!--       <span class="content">(학비 및 생활비 지원)</span><br><br>  -->
-                        <div class="day"><%= endDate.get(i).getEndDay().substring(0, 11) %> 까지</div>
+                        <div class="day"><%= startDate.get(i).getEndDay().substring(0, 11) %> 까지</div>
                  <!--       <span class="dmd">(D-5)</span>  -->
                     </div>
                 <% } %>

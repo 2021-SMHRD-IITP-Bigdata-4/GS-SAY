@@ -66,19 +66,13 @@ public class maininfoDAO {
 	         for (int i = 0; i < 8; i++) {
 	            rs.next();
 	            int infoNum = rs.getInt(1);
-	            String infoName = rs.getString(2);
-	            
-	            String startDay = rs.getString(3);
-	            SimpleDateFormat beforeformatter =new SimpleDateFormat("yyyy-MM-dd 00:00:00");
-	            SimpleDateFormat formatter =new SimpleDateFormat("yyyy-MM-dd ");
-	            Date formatDate = beforeformatter.parse(startDay);
-	            String newstartDay = formatter.format(formatDate);
-	            
+	            String infoName = rs.getString(2);	            
+	            String startDay = rs.getString(3);	            
 	            String endDay = rs.getString(4);
 	            int code = rs.getInt(5);
 	            String infoLink = rs.getString(6);
 	            
-	            dto = new mainInfoDTO(infoNum, infoName, newstartDay, endDay, code, infoLink);
+	            dto = new mainInfoDTO(infoNum, infoName, startDay, endDay, code, infoLink);
 	            endDate.add(dto); 
 	         }
 	      } catch (Exception e) {

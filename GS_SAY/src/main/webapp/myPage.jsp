@@ -53,6 +53,7 @@
     </style> 
 </head>
 <body>
+<% session.removeAttribute("searchDTO"); %>
     <div>
         <!--¸Þ´º¹Ù-->
         <div id = "menubar">

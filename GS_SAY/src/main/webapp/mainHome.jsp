@@ -82,6 +82,7 @@
                     <img id="rogo" src="img/rogo.bmp">
                 </a>
             </div>
+            <% session.removeAttribute("searchDTO"); %>
             <% listDTO login = (listDTO)session.getAttribute("login"); %>
             <% if (login != null) { %>
             <nav id="menubox">

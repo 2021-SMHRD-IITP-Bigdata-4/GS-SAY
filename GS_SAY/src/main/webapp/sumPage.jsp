@@ -54,6 +54,7 @@
     </style>
 </head>
 <body>
+<% session.removeAttribute("searchDTO"); %>
     <div>
         <!--메뉴바-->
         <div id = "menubar">
@@ -72,7 +73,7 @@
             </nav>
             <% } else { %>
             <nav id="menubox">
-                <a href="login.jsp">로그인</a>
+                <a href="login.jsp">로그인/회원가입</a>
                 <a href="search.jsp">지원제도 검색</a>
             </nav>
             <% } %>

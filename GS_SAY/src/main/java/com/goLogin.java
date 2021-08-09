@@ -16,6 +16,7 @@ public class goLogin extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		
+		session.removeAttribute("searchDTO");
 		session.removeAttribute("findDto");
 		session.removeAttribute("login");
 		

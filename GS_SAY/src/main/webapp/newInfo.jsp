@@ -96,6 +96,7 @@
      
 </head>
 <body>
+<% session.removeAttribute("searchDTO"); %>
     <div>
         <div id = "menubar">
             <div id="rogobox">

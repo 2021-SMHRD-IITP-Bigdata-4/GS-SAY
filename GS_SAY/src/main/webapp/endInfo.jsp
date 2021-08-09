@@ -65,7 +65,7 @@
             font-weight: bold; font-size: 160%;
         }
         #hot{
-             width: 17%; position: absolute; margin-top: 0.5%; margin-left: 16.5%; margin-right: 15%; width:18%; height: 15%; font-size: 60%;
+             width: 17%; position: absolute; margin-top: 0.4%; margin-left: 12.5%; margin-right: 15%; width:18%; height: 15%; font-size: 60%;
         }
         #field{
             position: absolute; top: 50%; margin-left: 66%; margin-right: 0%;
@@ -95,6 +95,7 @@
      
 </head>
 <body>
+<% session.removeAttribute("searchDTO"); %>
     <div>
         <div id = "menubar">
             <div id="rogobox">

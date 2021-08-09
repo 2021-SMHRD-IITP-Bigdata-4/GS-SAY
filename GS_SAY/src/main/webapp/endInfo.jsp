@@ -157,7 +157,7 @@
               <td style="font-size: 100%; height: 40px; font-weight: bold;"><%= i+1 %></td>
               <td><%= endDateMore.get(i).getStartDay().substring(0, 11) %></td>
               <td><%= endDateMore.get(i).getEndDay().substring(0, 11) %></td>
-              <td><a id="info" href="<%= endDateMore.get(i).getInfoLink() %>"><%= endDateMore.get(i).getInfoName() %></a></td>
+              <td><a id="info" href="<%= endDateMore.get(i).getInfoLink() %>" target="_blank"><%= endDateMore.get(i).getInfoName() %></a></td>
             </tr>
     	     <% } %>  
           </tbody>

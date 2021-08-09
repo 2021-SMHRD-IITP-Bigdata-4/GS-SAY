@@ -80,7 +80,7 @@ span{
 .head{
     font-family: menufont; font-weight: bold; color: black;
     font-size: 150%; width: 260px; height:170px;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; padding-top: 3%;
 }
 .head > a{
 	text-decoration: none; color: black;

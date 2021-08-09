@@ -224,7 +224,7 @@
                     <tr>
                       <td><%=i+1%></td><td><%= searchDTO.get(i).getStartDay().substring(0, 11)%></td>
                       <td><%=searchDTO.get(i).getEndDay().substring(0, 11)%></td>
-                      <td><a id="info" href="<%=searchDTO.get(i).getInfoLink()%>"><%=searchDTO.get(i).getInfoName()%></a></td>
+                      <td><a id="info" href="<%=searchDTO.get(i).getInfoLink()%>" target="_blank"><%=searchDTO.get(i).getInfoName()%></a></td>
                       <td><a id="info" href="myInfoProgram?num=<%=+searchDTO.get(i).getInfoNum()%>">¿˙¿Â</a></td>
                     </tr>
                     

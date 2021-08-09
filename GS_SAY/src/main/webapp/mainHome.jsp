@@ -145,21 +145,21 @@
             	<% ArrayList<mainInfoDTO> endDate = dao.endinfo(); %>
             	<% for (int i = 0; i < endDate.size(); i++) {%>
                     <div class="slidediv">
-                    	<% if (((endDate.get(i).getCode()-1)/6)/8 == 0) { %>
+                    	<% if (((endDate.get(i).getCode()-1)/6)%8 == 0) { %>
 						<span class="people">[전체]</span>
-						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 1) { %>
+						<% } else if(((endDate.get(i).getCode()-1)/6)%8 == 1) { %>
 						<span class="people">[대학생/대학원생]</span>
-						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 2) { %>
+						<% } else if(((endDate.get(i).getCode()-1)/6)%8 == 2) { %>
 						<span class="people">[군인]</span>
-						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 3) { %>
+						<% } else if(((endDate.get(i).getCode()-1)/6)%8 == 3) { %>
 						<span class="people">[구직/이직자/실업자]</span>
-						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 4) { %>
+						<% } else if(((endDate.get(i).getCode()-1)/6)%8 == 4) { %>
 						<span class="people">[재직자]</span>
-						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 5) { %>
+						<% } else if(((endDate.get(i).getCode()-1)/6)%8 == 5) { %>
 						<span class="people">[창업자/예비창업자]</span>
-						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 6) { %>
+						<% } else if(((endDate.get(i).getCode()-1)/6)%8 == 6) { %>
 						<span class="people">[장애인]</span>
-						<% } else if(((endDate.get(i).getCode()-1)/6)/8 == 7) { %>
+						<% } else if(((endDate.get(i).getCode()-1)/6)%8 == 7) { %>
 						<span class="people">[임신부]</span>
 						<% } %>
 						
@@ -204,21 +204,21 @@
             	<% ArrayList<mainInfoDTO> startDate = dao.startinfo(); %>
                 <% for (int i = 0; i < startDate.size(); i++) {%>
                     <div class="slidediv">
-						<% if (((startDate.get(i).getCode()-1)/6)/8 == 0) { %>
+						<% if (((startDate.get(i).getCode()-1)/6)%8 == 0) { %>
 						<span class="people">[전체]</span>
-						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 1) { %>
+						<% } else if(((startDate.get(i).getCode()-1)/6)%8 == 1) { %>
 						<span class="people">[대학생/대학원생]</span>
-						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 2) { %>
+						<% } else if(((startDate.get(i).getCode()-1)/6)%8 == 2) { %>
 						<span class="people">[군인]</span>
-						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 3) { %>
+						<% } else if(((startDate.get(i).getCode()-1)/6)%8 == 3) { %>
 						<span class="people">[구직/이직자/실업자]</span>
-						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 4) { %>
+						<% } else if(((startDate.get(i).getCode()-1)/6)%8 == 4) { %>
 						<span class="people">[재직자]</span>
-						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 5) { %>
+						<% } else if(((startDate.get(i).getCode()-1)/6)%8 == 5) { %>
 						<span class="people">[창업자/예비창업자]</span>
-						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 6) { %>
+						<% } else if(((startDate.get(i).getCode()-1)/6)%8 == 6) { %>
 						<span class="people">[장애인]</span>
-						<% } else if(((startDate.get(i).getCode()-1)/6)/8 == 7) { %>
+						<% } else if(((startDate.get(i).getCode()-1)/6)%8 == 7) { %>
 						<span class="people">[임신부]</span>
 						<% } %>
 						

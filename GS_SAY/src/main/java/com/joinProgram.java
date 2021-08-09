@@ -29,7 +29,7 @@ public class joinProgram extends HttpServlet {
 		
 		try {
 			if (cnt > 0) {
-				response.sendRedirect("mainHome.jsp");
+				response.sendRedirect("login.jsp");
 			} else {
 				response.sendRedirect("join.jsp");
 			}

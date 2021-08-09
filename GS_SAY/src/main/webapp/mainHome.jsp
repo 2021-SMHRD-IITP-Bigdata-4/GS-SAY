@@ -53,7 +53,22 @@
         #teg{
             width: 100%;
         }
-       
+       	#jung3{
+    		width: 25%; padding-top: 4%; 
+		}
+		#jung3btn:hover{
+			border-color: #B44000; border-width: 2.5px; border-style: solid;
+		}
+		#jung3btn{
+    		background-color: #FFE4C4; padding: 0.5%; border-radius: 5%;
+   		 	width: 60%; text-align: center; height: 40%; margin-left: 115px;
+		}
+		#jung3 a{
+    		text-decoration: none; display: block; padding-top: 5%;
+		}
+		#jung3 span{
+   			color:#EA5400; font-size: 150%; 
+		}
         
     </style>
 </head>
@@ -100,7 +115,7 @@
             </div>
             <div id="jung3">
                 <div id="jung3btn">
-                    <a href="sumPage.jsp"><span id="jung3submit">확인하러 가기</span></a>
+                    <a href="sumPage.jsp"><span style=" font-weight: bold; border-radius: 8%; border-color: #FF853F;" id="jung3submit">확인하러 가기</span></a>
                 </div>
             </div>
         </div>
@@ -132,7 +147,7 @@
             	<% String dateF = endDate.get(i).getEndDay(); %>
                     <div class="slidediv">
                 	    <div class="head" style = "overflow:hidden; word-wrap:break-word;"><a href="<%= endDate.get(i).getInfoLink() %>"><%= endDate.get(i).getInfoName() %></a></div><br>
-                        <div class="day"><%= endDate.get(i).getEndDay() %> 까지</div>
+                        <div class="day"><%= endDate.get(i).getEndDay().substring(0, 11) %> 까지</div>
                     </div>
                 <% } %>
                 <br><br>
@@ -163,7 +178,7 @@
                         <span class="category">[교육]</span><br><br>  -->
                         <div class="head" style = "overflow:hidden; word-wrap:break-word;"><a href="<%=startDate.get(i).getInfoLink() %>"><%= startDate.get(i).getInfoName() %></a></div><br>
                  <!--       <span class="content">(학비 및 생활비 지원)</span><br><br>  -->
-                        <div class="day"><%= endDate.get(i).getEndDay() %> 까지</div>
+                        <div class="day"><%= endDate.get(i).getEndDay().substring(0, 11) %> 까지</div>
                  <!--       <span class="dmd">(D-5)</span>  -->
                     </div>
                 <% } %>

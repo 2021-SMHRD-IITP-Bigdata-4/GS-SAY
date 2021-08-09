@@ -102,7 +102,7 @@
             <% for (int i = 0; i < scrapView.size(); i++) {%>
             <tr>
                 <td><span><%= i+1 %></span></td>
-                <td><span><%= scrapView.get(i).getEndDay() %></span></td>
+                <td><span><%= scrapView.get(i).getEndDay().substring(0, 11) %></span></td>
                 <td><span><a id="info" href="<%= scrapView.get(i).getInfoLink() %>"><%= scrapView.get(i).getInfoName() %></a></span></td>
             </tr>
             <% } %>

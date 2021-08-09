@@ -103,8 +103,8 @@
             position: absolute; width:70%; top:125%; margin-left: 15%; text-align: center; 
         }
         .menubutton{
-            font-size: 20px; width: 130px; height: 50px; color:#FF853F; background-color:#FFE4C4; border-radius: 8%; font-weight: bold; 
-            border-color: #FF853F;
+            font-size: 20px; width: 130px; height: 50px; color:#EA5400; background-color:#FFE4C4; border-radius: 8%; font-weight: bold; 
+            border-color: #FF853F; font-weight: bold;
         }
         #needbox{
        	 width: 100%; position: absolute; text-align: center; font-family: menufont;  font-weight: bold;
@@ -222,8 +222,8 @@
                    
                    <% for(int i =0; i<searchDTO.size();i++){%>
                     <tr>
-                      <td><%=i+1%></td><td><%= searchDTO.get(i).getStartDay()%></td>
-                      <td><%=searchDTO.get(i).getEndDay()%></td>
+                      <td><%=i+1%></td><td><%= searchDTO.get(i).getStartDay().substring(0, 11)%></td>
+                      <td><%=searchDTO.get(i).getEndDay().substring(0, 11)%></td>
                       <td><a id="info" href="<%=searchDTO.get(i).getInfoLink()%>"><%=searchDTO.get(i).getInfoName()%></a></td>
                       <td><a id="info" href="myInfoProgram?num=<%=+searchDTO.get(i).getInfoNum()%>">¿˙¿Â</a></td>
                     </tr>

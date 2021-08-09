@@ -25,19 +25,7 @@
 #jung2check{
     color:black; font-size: 200%; 
 }
-#jung3{
-    width: 25%; padding-top: 4%; 
-}
-#jung3btn{
-    background-color: #FFE4C4; color:#FF853F; padding: 0.5%; border-radius: 5%;
-    width: 60%; text-align: center; height: 40%; margin-left: 115px;
-}
-#jung3 a{
-    text-decoration: none; display: block; padding-top: 5%;
-}
-#jung3 span{
-    color:black; font-size: 150%;
-}
+
 span{
    font-family: menufont;
 }

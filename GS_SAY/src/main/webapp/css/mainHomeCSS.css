@@ -120,7 +120,7 @@ span{
 }
 /*신규지원제도 슬라이드*/
 #newslidebox{
-    display: flex; top: 159%; margin-left: 15%; margin-right: 15%;  position: absolute;
+    display: flex; top: 161%; margin-left: 15%; margin-right: 15%;  position: absolute;
      width: 70%; padding-bottom: 7.5%;
 }
 #nsb{

@@ -70,7 +70,7 @@
         #field{
             position: absolute; top: 50%; margin-left: 66%; margin-right: 0%;
         }
-        #target{
+        #target{"C:/Users/bigdata02/Desktop/KakaoTalk_20210701_162148818.jpg"
             position: absolute; top: 50%; margin-left: 76%; margin-right: 0%;
         }
         #table{
